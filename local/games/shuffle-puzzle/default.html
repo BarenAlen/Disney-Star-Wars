@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Shuffle Puzzle</title>
+
+	<!-- CSS style for Shuffle Puzzle-->
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/suffle_puzzle_with_counter.css" type="text/css">
+	
+	<!-- JavaScript libraries -->
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.shufflepuzzle.min.js"></script>
+
+</head>
+<body>
+	<div id="Puzzle"></div>
+	<!-- Your parameters for Shuffle Puzzle -->
+	<script type="text/javascript">
+		$(function(){
+			/*var config = {
+				img_puzzle: 'img/puzzle.jpg',
+				width: 400,
+				height: 400,
+				showStart: true,
+				tilesH: 4,
+				tilesV: 4,
+				gap: true,
+				auto_size: false,
+				duration: 200,
+				bgColor: '#fff',
+				bgOpacity: 1,
+				imgBgOpacity: .2,
+				shuffleNum: 5,
+				menuVisible: false,
+				menuNameShuffle: 'Shuffle',
+				menuNameGrid: 'Grid',
+				menuNameImage: null,
+				menu_shuffle:null,
+				menu_grid: null,
+				menu_image: null,
+				onStart : null,
+				onChange : null,
+				afterCreate : null,
+				onCompleted : function () { alert("Congratulations, you've won!"); },
+				firstStart : null,
+				stop : false}
+			$('#Puzzle').shufflepuzzle(config);*/
+			
+			$('#Puzzle').shufflepuzzle();
+		});
+	</script>
+</body>
+</html>

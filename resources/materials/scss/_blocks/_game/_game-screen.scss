@@ -1,0 +1,287 @@
+.game-screen {
+	background: url("../img/game/bg-2.jpg") no-repeat;
+	// background-size: auto 100%;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	position: relative;
+
+	.page-header {
+		// position: relative;
+		z-index: 223;
+		height: 90px;
+
+	    
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-image: url("../img/logo-bg.png");
+			background-repeat: no-repeat;
+			background-position: left top;
+			width: 345px;
+			height: 126px;
+			z-index: -1;
+		}
+	}
+
+	&_toggler {
+		display: none;
+	}
+
+	@media screen and (min-width: 768px) {
+		height: 100%;
+		align-items: center;
+		
+		&_toggler {
+			text-align: center;
+			display: block;
+
+			&_btn {
+				display: inline-block;
+				border: 0;
+				padding: 0;
+				background: none;
+				width: 200px;
+				height: 120px;
+				margin-bottom: 80px;
+				position: relative;
+				z-index: 20;
+
+				// background: #549;
+
+				.arm {
+					display: block;
+					position: relative;
+					height: 100%;
+
+					&::after {
+						content: "";
+						display: block;
+						position: absolute;
+						width: 1196px;
+						height: 320px;
+						background: url("../img/game/arm.png") no-repeat;
+						background-position: left bottom;
+						// top: -40px;
+						bottom: -120px;
+						right: -295px;
+						z-index: 1;
+					}
+
+					// &::before {
+					// 	content: "";
+					// 	display: block;
+					// 	position: absolute;
+					// 	width: 1077px;
+					// 	height: 282px;
+					// 	background: url("../img/game/arm-hov.png") no-repeat;
+					// 	background-position: left bottom;
+					// 	// top: -40px;
+					// 	bottom: -104px;
+					// 	right: -295px;
+					// 	z-index: 2;
+					// 	opacity: 0;
+					// 	transition: .2s;
+					// }
+				}
+
+				// &::before {
+				// 	content: "";
+				// 	display: block;
+				// 	position: absolute;
+				// 	width: 1077px;
+				// 	height: 282px;
+				// 	background: url("../img/game/arm-active.png") no-repeat;
+				// 	background-position: left bottom;
+				// 	bottom: -104px;
+				// 	right: -295px;
+				// 	z-index: 2;
+				// 	opacity: 0;
+				// 	transition: .2s;
+				// 	z-index: 10;
+				// }
+
+				// &:hover,
+				// &:focus {
+				// 	outline: none;
+				// 	.arm::before {
+				// 		opacity: 1;
+				// 	}
+				// }
+
+				// &.active::before {
+				// 	opacity: 1;
+				// 	height: 637px;
+				// }
+			}
+		}
+	}
+}
+
+.game-title {
+	font-size: 40px;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: .9;
+	padding: 20px 0 18px;
+	position: relative;
+
+	color: $af-blue;
+	// max-width: 352px;
+	margin: 0 auto;
+
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		height: 12px;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&::before {
+		width: 164px;
+		top: 0;
+		background-repeat: no-repeat;
+		background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAAMCAYAAADs+hbCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjY1RTdDNDhDNkQyMTFFNzlBREZBQzIwRkI0QUVBQjgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjY1RTdDNDlDNkQyMTFFNzlBREZBQzIwRkI0QUVBQjgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGNjVFN0M0NkM2RDIxMUU3OUFERkFDMjBGQjRBRUFCOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGNjVFN0M0N0M2RDIxMUU3OUFERkFDMjBGQjRBRUFCOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Puj03l0AAAD7SURBVHja7JmxCkFRHIeP202ZGJRbyuQBmElGeQJWZTMoKxbK4gmUlSeQSQqjxaCU8gyeQH6njsUgxzkncn9ffYt7O+rf1/92u74o9YUGFTiCKziEV0GIRbw378vCBVzCHOzAM2xqnEGIcZAJOIZHWH26loQTuIdljpK4DFL+3oAntQ2jL87IwzWcwwxHSmwHWVRbbwpTGmfVVMADGONoiWmQcrvN4EZtvU+QIXZVmHUY4YiJbpAyop7liB5xbw3iJiHEhxcYODq/oB7/B3j781m24Y5JmQcZOP4PLyRbMs6c7ARJ7CA/GqQ5Bgb5K7Q4Artv2YR8nbsAAwBNOB6yoj76GQAAAABJRU5ErkJggg==");
+
+		background-size: contain;
+	}
+
+	&::after {
+		width: 82px;
+		bottom: 0;
+		background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAMCAYAAAD8tppbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDFBQTMwRkZDNkQzMTFFNzgzMkE5NzkwNzYxNjE2RDQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDFBQTMxMDBDNkQzMTFFNzgzMkE5NzkwNzYxNjE2RDQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowMUFBMzBGREM2RDMxMUU3ODMyQTk3OTA3NjE2MTZENCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowMUFBMzBGRUM2RDMxMUU3ODMyQTk3OTA3NjE2MTZENCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pu0kJsIAAADmSURBVHjaYmSwq+NnYGD4wDAKqAE+Mo2GAXXBaICOBujgBixA/BeIz44Av4LqChUa2/ECFKBfgNhkBAQoIxBHAHEHEMtR2WxQpd4CxJOZGeTtR1KOvALEM4H4OxBbADErheb9A+L5QBwExLtBuX0klqGgwGwFYk0gXg7E/8k05wA0ZyeDsvpopcTA8AiIo4DYCohPkKDvPjRFOgLx+dFaHhOcgAZqDBA/x6MOVNfUALE2EK/HpWiklaH4wGVo+QoqAkyRyldYORkIxNuA+A/+ms+ubjQoMYEctDWgAMTZ2LI2LgAQYAD0zih5qATZRAAAAABJRU5ErkJggg==");
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	@media screen and (min-width: 480px) {
+		font-size: 48px;
+	}
+}
+
+.sides-list {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+
+		&:first-child {
+			margin-right: 16px;
+		}
+	}
+}
+
+.btn-light-side,
+.btn-dark-side {
+	display: block;
+	margin: 10px auto 10px;
+	padding: 0;
+	padding-top: 30px;
+	padding-left: 124px;
+	border: 0;
+	width: 264px;
+	height: 100px;
+	text-decoration: none;
+	overflow: hidden;
+	text-decoration: none;
+	position: relative;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 900;
+	text-align: left;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 36px;
+		transition: transform .4s ease-out;
+	}
+
+	&:hover {
+		&::before {
+			transform: scale(1.2);
+		}
+	}
+}
+
+.btn-light-side {
+	background: url("../img/game/btn-light-side.png") no-repeat;
+	background-size: 264px 100px;
+	background-position: center;
+
+	&::before {
+		width: 69px;
+		height: 72px;
+		top: 13px;
+		background-image: url("../img/icons/resistance.png");
+		background-repeat: no-repeat;
+		background-size: 69px 72px;
+	}
+}
+
+.btn-dark-side {
+	background: url("../img/game/btn-dark-side.png") no-repeat;
+	background-size: 264px 100px;
+	background-position: center;
+
+	&::before {
+		width: 67px;
+		height: 77px;
+		top: 11px;
+		background-image: url("../img/icons/first-order.png");
+		background-repeat: no-repeat;
+		background-size: 67px 77px;
+	}
+}
+
+.mission-title {
+	font-size: 40px;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: .9;
+	padding: 20px 0 18px;
+	position: relative;
+
+	color: #fff;
+	margin: 0 auto;
+
+	&::after {
+		content: "";
+		display: block;
+		height: 12px;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&::after {
+		width: 82px;
+		bottom: 0;
+		background-image: url("../img/game/text-idle-dec-bottom.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	@media screen and (min-width: 480px) {
+		font-size: 48px;
+	}
+}

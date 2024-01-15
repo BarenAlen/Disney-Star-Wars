@@ -1,0 +1,42 @@
+.timeline {
+	max-width: 356px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0;
+	margin: 46px auto 0;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 100px;
+		right: 100px;
+		top: 34px;
+		border-top: 2px dashed #cacaca;
+	}
+
+	&_item {
+		display: inline-block;
+		width: 100px;
+		vertical-align: middle;
+		font-size: 12px;
+		color: $grey;
+		font-weight: bold;
+		line-height: 1.5;
+		padding-top: 66px;
+		text-align: center;
+
+		&:first-child {
+			background: url("../img/timeline-dec-1.png") no-repeat;
+			background-position: center top;
+			background-size: 88px;
+		}
+
+		&:last-child {
+			background: url("../img/timeline-dec-2.png") no-repeat;
+			background-position: center top;
+			background-size: 84px;
+		}
+	}
+}

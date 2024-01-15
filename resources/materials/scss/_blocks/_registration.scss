@@ -1,0 +1,74 @@
+.reg {
+	height: auto !important;
+    // min-height: 100%;
+
+	.mission-title {
+		margin-bottom: 30px;
+	}
+
+	.form-group {
+		margin-bottom: 12px;
+	}
+
+	.help-block {
+		padding-left: 28px;
+	}
+
+	&_bg {
+		background: url("../img/fancybox/overlay.png"), url("../img/interface.png");
+		background-repeat: repeat, no-repeat;
+		background-position: left top, center;
+		background-size: auto, auto;
+		background-attachment: scroll, fixed;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		z-index: 400;
+	}
+
+	&_container {
+		margin: 0 auto;
+		padding: 70px 10px 0;
+		max-width: 510px;
+		position: relative;
+		z-index: 500;
+
+
+		.btn-close {
+			position: absolute;
+			right: 10px;
+			top: 0;
+		}
+	}
+
+	&_footer {
+		text-align: center;
+	}
+
+	&_inputs {
+		margin-bottom: 10px;
+	}
+	
+	@media screen and (min-width: 768px) {
+		&_inputs {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			.form-group {
+				width: 250px;
+			}
+		}
+
+		&_container {
+			padding: 0;
+
+			.btn-close {
+				right: -84px;
+			}
+		}
+	}
+}

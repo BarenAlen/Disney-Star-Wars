@@ -1,0 +1,61 @@
+$fonts-path: '../fonts/';
+
+@font-face {
+	// AeroBonus Regular
+	font-family: 'AeroBonus';
+	src:
+	url($fonts-path + 'AeroBonus-Regular.eot'),
+	url($fonts-path + 'AeroBonus-Regular.otf') format('opentype'),
+	url($fonts-path + 'AeroBonus-Regular.woff2') format('woff2'),
+	url($fonts-path + 'AeroBonus-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	// AeroBonus Light 300
+	font-family: 'AeroBonus';
+	src:
+	url($fonts-path + 'AeroBonus-Light.eot'),
+	url($fonts-path + 'AeroBonus-Light.otf') format('opentype'),
+	url($fonts-path + 'AeroBonus-Light.woff2') format('woff2'),
+	url($fonts-path + 'AeroBonus-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	// AeroBonus Bold 700
+	font-family: 'AeroBonus';
+	src:
+	url($fonts-path + 'AeroBonus-Bold.eot'),
+	url($fonts-path + 'AeroBonus-Bold.otf') format('opentype'),
+	url($fonts-path + 'AeroBonus-Bold.woff2') format('woff2'),
+	url($fonts-path + 'AeroBonus-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	// AeroBonus Italic
+	font-family: 'AeroBonus';
+	src: 
+	url($fonts-path + 'AeroBonus-Italic.eot'),
+	url($fonts-path + 'AeroBonus-Italic.otf') format('opentype'),
+	url($fonts-path + 'AeroBonus-Italic.woff2') format('woff2'),
+	url($fonts-path + 'AeroBonus-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	// AeroBonus Heavy
+	font-family: 'AeroBonus';
+	src:
+	url($fonts-path + 'AeroBonus-Heavy.eot'),
+	url($fonts-path + 'AeroBonus-Heavy.otf') format('opentype'),
+	url($fonts-path + 'AeroBonus-Heavy.woff2') format('woff2'),
+	url($fonts-path + 'AeroBonus-Heavy.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}

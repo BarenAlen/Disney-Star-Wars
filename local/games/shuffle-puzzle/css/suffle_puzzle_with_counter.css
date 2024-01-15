@@ -1,0 +1,81 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.sp_box {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility:hidden;
+  transition:visibility 0s linear 0.5s, z-index 0s linear 0.5s, opacity 0.5s linear;
+  background: rgba(0, 0, 0, 0.73);
+  z-index: 0;
+  position: absolute;
+  z-index: 0;
+}
+.sp_box.visible {
+  visibility:visible;
+  opacity:1;
+  transition-delay:0s;
+  z-index: 9999;
+}
+
+.sp_box > div{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.sp_box > div > div > *{
+  margin: 0;
+}
+.sp_box > div > div {
+  color: #EBEBEB;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 46px;
+  line-height: 60px;
+  font-weight: bold;
+  text-align: center;         
+  height:100%;      
+  width: 100%;  
+  display: table-cell;      
+  vertical-align: middle;
+}
+
+.sp_box .retry-button  {
+  display: inline-block;
+  background: #71A42F;
+  border-bottom: 6px solid #476B18;
+  font-size: 22px;
+  padding: 0 20px 5px;
+  text-decoration: none;
+  color: #FFFFFF;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  margin-left: 9px;
+}
+
+.counter{
+  font-size: 25px;
+  line-height: 25px;
+}
+
+#Counter {
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  right: 0;
+}
+.sp_box .retry-button:active {
+    background: #476B18;
+}
+.c_movies {
+  background-color: rgba(22, 8, 34, 0.57);
+  font-family: 'Open Sans', sans-serif;
+  color: #FFF;
+  text-align: center;
+  margin: 0 auto;
+  width: 60px;
+}
+

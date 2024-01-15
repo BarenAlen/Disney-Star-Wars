@@ -1,0 +1,95 @@
+.game-footer {
+
+	padding-bottom: 10px;
+	position: relative;
+	z-index: 2;
+
+	// position: absolute;
+	// bottom: 0;
+	// right: 0;
+
+	&_container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100%;
+	}
+
+	&_col {
+		width: 100%;
+		text-align: right;
+		padding-right: 10px;
+		padding-left: 10px;
+
+		&:nth-child(2) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&_premiere {
+		display: inline-block;
+		text-align: center;
+		font-weight: bold;
+		color: #fff;
+		font-size: 12px;
+		margin-bottom: 9px;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		background: url("../img/footer-corner.png") no-repeat;
+		background-size: 245px 246px;
+		background-position: bottom left;
+		width: 245px;
+		height: 246px;
+		bottom: 0;
+		right: -20px;
+		z-index: -1;
+	}
+
+	.copyright {
+		color: #fff;
+	}
+
+	&_sw-logo {
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 15px;
+	}
+
+	@media screen and (max-width: 480px) {
+		.copyright,
+		.lucas-film-copyright {
+			font-size: 12px;
+		}
+	}
+
+	@media screen and (min-width: 480px) {
+		&_col {
+			display: block;
+		}
+
+		.copyright {
+			margin-right: 30px;
+		}
+
+		&::after {
+			right: 0;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		z-index: 200;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding-bottom: 8px;
+	}
+}

@@ -1,0 +1,10 @@
+.form-group.required label:after {
+    content: '*';
+    font-style: normal;
+    color: #e62440;
+    margin: 0 2px;
+}
+
+.hidden {
+    display: none;
+}

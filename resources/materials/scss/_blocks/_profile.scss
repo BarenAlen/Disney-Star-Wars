@@ -1,0 +1,120 @@
+.profile {
+	padding: 10px 0 30px;
+    align-self: flex-start;
+	z-index: 1000;
+	
+	&_container {
+		@include container;
+		align-items: flex-end;
+	}
+
+	&_points,
+	&_name {
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 900;
+		line-height: 1;
+	}
+
+	&_name {
+		font-size: 10px;
+		padding-bottom: 20px;
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 150px;
+			height: 12px;
+			background: url("../img/profile-name-dec.png") no-repeat;
+			background-size: 172px 12px;
+		}
+	}
+
+	&_points {
+		font-size: 18px;
+		margin-bottom: 10px;
+		padding-left: 22px;
+	}
+
+	&_pic {
+		margin-right: 6px;
+		position: relative;
+
+		svg {
+			width: 80.5px;
+			height: 88.5px;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			background: url("../img/profile-pic-bd.png") no-repeat;
+			background-position: center;
+			right: 0;
+			top: 0;
+			bottom: 4px;
+
+		    background-size: 79px 89px;
+    		left: 0px;
+		}
+
+		.mix {
+			mix-blend-mode: darken;
+			opacity: .8;
+		}
+
+		&_btn {
+			display: block;
+			position: absolute;
+			bottom: 2px;
+			right: 2px;
+			z-index: 102;
+		}
+	}
+
+	@media screen and (min-width: 480px) {
+		padding: 20px 0;
+		z-index: 1000000;
+
+		&_name {
+			font-size: 12px;
+
+			&::after {
+				width: 172px;
+			}
+		}
+
+		&_points {
+			font-size: 24px;
+		}
+
+		&_pic {
+			margin-right: 12px;
+			svg {
+				width: 102.5px;
+				height: 117.5px;
+			}
+
+			&::after {
+				background-size: 103px 119px;
+				left: 1.5px;
+			}
+
+			&_btn {
+				right: -1px;
+			}
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		position: absolute;
+		bottom: 0;
+		z-index: 30;
+		left: 0;
+	}
+}

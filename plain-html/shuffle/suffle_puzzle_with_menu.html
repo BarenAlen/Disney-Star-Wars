@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Shuffle Puzzle</title>
+
+	<!-- CSS style for Shuffle Puzzle-->
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/suffle_puzzle_with_menu.css" type="text/css">
+	
+	<!-- JavaScript libraries -->
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.shufflepuzzle.uncompressed.js"></script>
+
+</head>
+<body>
+	<div id="Puzzle"></div>
+	<!-- Your parameters for Shuffle Puzzle -->
+	<script type="text/javascript">
+		$(function(){
+			var config = {
+				img_puzzle: 'img/puzzle.jpg',
+				width: 400,
+				height: 400,
+				auto_size: false,
+				showStart: true,
+				tilesH: 4,
+				tilesV: 4,
+				gap: true,
+				duration: 200,
+				bgColor: '#fff',
+				bgOpacity: 1,
+				imgBgOpacity: .2,
+				shuffleNum: 5,
+				menuVisible: true,
+				menuNameShuffle: 'Shuffle',
+				menuNameGrid: 'Grid',
+				menuNameImage: 'Image',
+				menu_shuffle:{
+					'Very Easy (3)': 3,
+					'Easy (10)': 8,
+					'Medium (30)': 20,
+					'Hard (60)': 60
+				},
+				menu_grid: ['3x3', '4x4', '5x5', '6x5'],
+				menu_image:{
+					'Macaca': 'img/puzzle.jpg',
+					'Sintel': 'img/puzzle1.jpg',
+					'Image': 'img/puzzle2.jpg',
+					'Big Buck Bunny': 'img/puzzle3.jpg',
+					'Car': 'img/puzzle4.jpg',
+					'Old Town': 'img/puzzle5.jpg'
+				}
+			}
+			$('#Puzzle').shufflepuzzle(config);
+		});
+	</script>
+</body>
+</html>

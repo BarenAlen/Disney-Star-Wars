@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="../materials/css/style.css" rel="stylesheet" />
+        <title></title>
+    </head>
+    <body>
+        <div class="game-screen">
+            <header class="page-header">
+                <div class="page-header_container">
+                    <a href="index.html" class="page-header_logo">
+                        <img
+                            src="../materials/img/ab-logo.png"
+                            srcset="../materials/img/ab-logo_2x.png 2x"
+                            alt="Аэрофлот Бонус"
+                            width="150"
+                        />
+                    </a>
+
+                    <nav class="main-nav">
+                        <button
+                            type="button"
+                            id="main-nav-toggler"
+                            data-type="static"
+                            class="main-nav-open main-nav-toggler"
+                        ></button>
+                        <div class="main-nav_content">
+                            <div class="main-nav_container">
+                                <button
+                                    type="button"
+                                    data-type="static"
+                                    class="main-nav-close main-nav-toggler"
+                                ></button>
+                                <ul class="main-nav_menu">
+                                    <li>
+                                        <a class="main-nav_menu_item" href="#"
+                                            >Об акции</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="main-nav_menu_item" href="#"
+                                            >Призы</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="main-nav_menu_item" href="#"
+                                            >Победители</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="main-nav_menu_item" href="#"
+                                            >Обратная связь</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="main-nav_link" href="#"
+                                            >Войти</a
+                                        >
+                                    </li>
+                                </ul>
+
+                                <ul class="main-nav_soc-list">
+                                    <li>
+                                        <a
+                                            class="main-nav_soc-list_item fb"
+                                            href="#"
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="main-nav_soc-list_item vk"
+                                            href="#"
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="main-nav_soc-list_item ok"
+                                            href="#"
+                                        ></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="reg">
+                <div class="reg_bg"></div>
+                <div class="reg_container">
+                    <a class="btn-close" href="#">Закрыть</a>
+                    <div class="mission-title">Заполнить заявку на вылет</div>
+                    <form action="#">
+                        <div class="reg_inputs">
+                            <div
+                                class="form-group field-userwork-username required"
+                            >
+                                <div class="input-text input-text--white">
+                                    <label
+                                        class="label-inside control-label"
+                                        for=""
+                                        >Имя</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id=""
+                                        class="form-control"
+                                        name=""
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                    />
+                                </div>
+                                <div class="help-block"></div>
+                            </div>
+                            <div class="form-group required has-error">
+                                <div class="input-text input-text--white">
+                                    <label
+                                        class="label-inside control-label"
+                                        for=""
+                                        >Фамилия</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id=""
+                                        class="form-control"
+                                        name=""
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                    />
+                                </div>
+                                <div class="help-block"></div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="input-text input-text--white">
+                                    <label
+                                        class="label-inside control-label"
+                                        for=""
+                                        >Электронная почта</label
+                                    >
+                                    <input
+                                        type="email"
+                                        id=""
+                                        class="form-control"
+                                        name=""
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                        value="temp@delete.me"
+                                        disabled
+                                    />
+                                </div>
+                                <div class="help-block"></div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="input-text input-text--white">
+                                    <label
+                                        class="label-inside control-label"
+                                        for=""
+                                        >Дата рождения</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id=""
+                                        class="form-control"
+                                        name=""
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                    />
+                                </div>
+                                <div class="help-block">
+                                    Error Error Error Error
+                                </div>
+                            </div>
+
+                            <div class="form-group field-rating-in_rating">
+                                <div class="input-select input-select--white">
+                                    <label
+                                        class="label-inside control-label"
+                                        for="rating-in_rating"
+                                        >Код страны</label
+                                    >
+                                    <select
+                                        id="rating-in_rating"
+                                        class="form-control"
+                                        name="Rating[in_rating]"
+                                    >
+                                        <option value="1" selected>
+                                            Россия (+7)
+                                        </option>
+                                        <option value="2">Заблокировано</option>
+                                        <option value="3">
+                                            Требует проверки
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="help-block"></div>
+                            </div>
+
+                            <div class="form-group required">
+                                <div class="input-text input-text--white">
+                                    <label
+                                        class="label-inside control-label"
+                                        for=""
+                                        >Номер телефона</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id=""
+                                        class="form-control"
+                                        name=""
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                    />
+                                </div>
+                                <div class="help-block"></div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="input-text input-text--white">
+                                    <label
+                                        class="label-inside control-label"
+                                        for=""
+                                        >Город</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id=""
+                                        class="form-control"
+                                        name=""
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                    />
+                                </div>
+                                <div class="help-block"></div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="input-text input-text--white">
+                                    <label
+                                        class="label-inside control-label"
+                                        for=""
+                                        >Ссылка на профиль в соц.сети *</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id=""
+                                        class="form-control"
+                                        name=""
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                    />
+                                </div>
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+                        <div class="reg_footer">
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input
+                                        type="checkbox"
+                                        class="input-checkbox"
+                                        id="rules"
+                                    />
+                                    <label for="rules"
+                                        >Я согласен с
+                                        <a href="#">правилами акции</a></label
+                                    >
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-flyout">
+                                отправить заявку на вылет
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="game-screen_toggler">
+                <button
+                    type="button"
+                    class="game-screen_toggler_btn game-slider-toggler"
+                >
+                    <span class="arm"></span>
+                </button>
+            </div>
+
+            <div class="profile">
+                <div class="profile_container">
+                    <div class="profile_pic">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 102.5 117.5"
+                        >
+                            <defs>
+                                <pattern
+                                    id="profile-img"
+                                    x="-10"
+                                    y="0"
+                                    patternUnits="userSpaceOnUse"
+                                    width="116"
+                                    height="116"
+                                >
+                                    <image
+                                        xlink:href="../materials/img/profile.png"
+                                        x="0"
+                                        y="0"
+                                        width="120"
+                                        height="120"
+                                        preserveAspectRatio="xMidYMin slice"
+                                    />
+                                </pattern>
+                            </defs>
+                            <path
+                                fill="url(#profile-img)"
+                                d="M0 87.6l.7-58.8L51.9 0l50.6 30-.7 58.8-51.2 28.7"
+                            />
+                            <path
+                                class="mix"
+                                fill="#e62440"
+                                d="M0 87.6l.7-58.8L51.9 0l50.6 30-.7 58.8-51.2 28.7"
+                            />
+                        </svg>
+                        <a href="#" class="profile_pic_btn"
+                            ><i class="ico-photo"></i
+                        ></a>
+                    </div>
+
+                    <div>
+                        <div class="profile_name">
+                            Александра Александровская
+                        </div>
+                        <div class="profile_points">32 балла</div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="game-footer">
+                <div class="game-footer_container">
+                    <div class="game-footer_col">
+                        <div class="game-footer_premiere">
+                            <img
+                                class="game-footer_sw-logo"
+                                src="../materials/img/game/sw-logo.png"
+                                width="124"
+                                height="44"
+                                alt="Звездные войны. Последние джедаи"
+                            />
+                            <div>В КИНО С 14 ДЕКАБРЯ</div>
+                        </div>
+                    </div>
+                    <div class="game-footer_col">
+                        <span class="copyright">&copy; Аэрофлот</span>
+                        <span class="lucas-film-copyright"
+                            >&copy; &amp; TM Lucasfilm Ltd.</span
+                        >
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- ЗАЯВКА НА ВЫЛЕТ -->
+
+        <div id="fly-out" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-helmet"></i>
+                    <div class="game-title">Заявка на вылет</div>
+                    <p class="pgph">
+                        Чтобы отправиться в полет к месту противостояния,
+                        заполните заявку и получите разрешение на вылет.
+                    </p>
+                    <p class="pgph">
+                        Вы получите <span class="accent">+1 балл</span> за
+                        точное заполнение заявки на&nbsp;вылет.
+                    </p>
+                    <a href="#fly-out-complete" class="btn fancybox"
+                        >Начать задание</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div id="fly-out-complete" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-helmet"></i>
+                    <div class="game-title">Заявка на вылет</div>
+                    <p class="pgph offset-lg">
+                        Вы получаете <span class="accent">+1 балл</span> за
+                        точное заполнение<br />
+                        заявки на вылет.
+                    </p>
+                    <a href="#" class="btn-continue">Продолжить</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ЗВЕЗДНАЯ КАРТА -->
+
+        <div id="star-map" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-stars"></i>
+                    <div class="game-title">Звездная карта</div>
+                    <p class="pgph offset-top-lg">
+                        Для того, чтобы определиться с маршрутом полета,<br />Вам
+                        нужно собрать карту звездного неба.<br />У Вас есть
+                        ровно <span class="accent">1&nbsp;минута</span>.
+                    </p>
+                    <p class="pgph">
+                        Награда за успешное выполнение задания
+                        <span class="accent">+5&nbsp;баллов</span>.
+                    </p>
+                    <a href="#star-map-complete" class="btn fancybox"
+                        >начать задание</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div id="star-map-complete" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-stars"></i>
+                    <div class="game-title">Звездная карта</div>
+                    <p class="pgph offset-top-lg">
+                        Вы обладаете отличными навыками штурмана и всегда
+                        сможете проложить правильный маршрут.<br /><span
+                            class="accent"
+                            >+5&nbsp;баллов</span
+                        >
+                        - ваша награда.
+                    </p>
+                    <a href="#" class="btn-continue">продолжить</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ВЕРНЫЕ ДРУЗЬЯ -->
+
+        <div id="loyal-friends" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-friends"></i>
+                    <div class="game-title">Верные друзья</div>
+                    <p class="pgph">
+                        Попросите друзей присоединиться к полету на Вашем
+                        корабле, отправив им ссылку любым способом – оставив ее
+                        в социальной сети, отправив по почте или в любом
+                        межгалактическом мессенджере.
+                    </p>
+                    <p class="pgph pgph-sm">
+                        Однако тщательно выбирайте друзей, потому что на Вашем
+                        корабле всего <span class="accent">25 мест</span> и
+                        больше взять не получится.
+                    </p>
+                    <div class="pgph pgph-sm">
+                        Если друг воспользуется Вашим приглашением, Вы получите
+                        дополнительные баллы:
+                        <div>
+                            <b class="accent">+1 балл</b> - за каждого друга,
+                            который перейдет по Вашей ссылке.
+                        </div>
+                        <div>
+                            <b class="accent">+2 балла</b> - если ваш друг
+                            сделает Выбор между Светом и Тьмой.
+                        </div>
+                    </div>
+                    <form action="">
+                        <div
+                            class="form-group field-userwork-username required"
+                        >
+                            <div class="input-text">
+                                <label class="label-inside control-label" for=""
+                                    >Отправьте эту ссылку своим друзьям</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name=""
+                                    maxlength="255"
+                                    aria-required="true"
+                                    aria-invalid="true"
+                                    value="https://force.aeroflot.ru/invite/1239323j2323"
+                                />
+                                <button class="btn-copy" type="button">
+                                    копировать в буфер обмена
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ЭНЕРГИЯ КРИСТАЛЛОВ -->
+
+        <div id="crystal-energy" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-gem"></i>
+                    <div class="game-title">Энергия кристаллов</div>
+                    <p class="pgph offset-top-lg">
+                        Ваша Сила может быть преобразована в энергию светового
+                        меча. Однако в основе любого светового меча – особый
+                        кристалл.
+                    </p>
+                    <p class="pgph pgph-sm">
+                        Чем больше Вы соберете кристаллов, тем большей мощью
+                        будет обладать Ваш меч и больше баллов Вы получите.
+                        Однако помните, что время сбора кристаллов ограничено
+                        <span class="accent">1-й&nbsp;минутой</span>.
+                    </p>
+                    <a href="#crystal-energy-complete" class="btn fancybox"
+                        >начать задание</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div id="crystal-energy-complete" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-gem"></i>
+                    <div class="game-title">Энергия кристаллов</div>
+                    <p class="pgph offset-top-lg">
+                        Отлично! Вы собрали 25 кристаллов и получаете
+                        <span class="accent">+25&nbsp;баллов</span>!
+                    </p>
+                    <p class="pgph">
+                        В любой момент вы можете попробовать улучшить свой
+                        результат
+                    </p>
+                    <a href="#" class="btn-replay">переиграть</a>
+                    <br />
+                    <a href="#" class="btn-continue">продолжить</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ПОТЕРЯННЫЕ КООРДИНАТЫ -->
+
+        <div id="lost-coordinates" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-radar"></i>
+                    <div class="game-title">потерянные координаты</div>
+                    <p class="pgph offset-top-lg">
+                        У Вас есть карта Вселенной, которая укажет путь
+                        к&nbsp;месту противостояния, однако врагу удалось
+                        спрятать часть карты. Нарушьте планы противника, найдите
+                        ее и&nbsp;получите
+                        <span class="accent">+25&nbsp;баллов</span>.
+                    </p>
+                    <div class="form-group field-userwork-username required">
+                        <div class="input-text">
+                            <label class="label-inside control-label" for=""
+                                >Введите номер своей карты &laquo;Аэрофлот
+                                Бонус&raquo;</label
+                            >
+                            <input
+                                type="text"
+                                class="form-control"
+                                name=""
+                                maxlength="255"
+                                aria-required="true"
+                                aria-invalid="true"
+                            />
+                        </div>
+                    </div>
+                    <div class="pgph-sm">
+                        Мы подскажем тебе, где находится недостающая часть карты
+                    </div>
+                    <p class="pgph">
+                        Вы еще не являетесь участником «Аэрофлот Бонус»?!
+                    </p>
+                    <div class="pgph-sm">
+                        Зарегистрируйтесь в программе, войдите в личный кабинет
+                        и&nbsp;получите ссылку на&nbsp;недостающую часть карты.
+                    </div>
+                    <a href="#lost-coordinates-next" class="btn-reg fancybox"
+                        >зарегистрироваться</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div id="lost-coordinates-next" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-radar"></i>
+                    <div class="game-title">потерянные координаты</div>
+                    <p class="pgph offset-top-lg">
+                        Отлично! У вас есть карта «Аэрофлот Бонус»! Зайдите в
+                        Личный кабинет программы, говорят, что недостающую часть
+                        карты видели там.
+                    </p>
+                    <a href="#lost-coordinates-complete" class="btn fancybox"
+                        >Найти карту</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div id="lost-coordinates-complete" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-radar"></i>
+                    <div class="game-title">потерянные координаты</div>
+                    <p class="pgph offset-lg">
+                        Поздравляем! Теперь у вас вся карта целиком, и вы
+                        сможете отправиться в полет. Кроме того, вы получаете
+                        <span class="accent">+25 баллов</span>!
+                    </p>
+                    <a href="#" class="btn-continue">Продолжить</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ДВЕ СТОРОНЫ СИЛЫ -->
+
+        <div id="two-sides" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-sides"></i>
+                    <div class="game-title">две стороны силы</div>
+                    <p class="pgph">
+                        Теперь, когда Вы ощутили Силу, пришло время для самого
+                        главного решения. Вы должны выбрать светлую или темную
+                        стороны. От этого решения зависит не только судьба
+                        Вселенной, но&nbsp;и&nbsp;Ваша&nbsp;судьба.
+                    </p>
+                    <ul class="sides-list">
+                        <li>
+                            <a
+                                href="#two-sides-light-complete"
+                                class="btn-light-side fancybox"
+                                >Светлая сторона</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#two-sides-dark-complete"
+                                class="btn-dark-side fancybox"
+                                >Темная сторона</a
+                            >
+                        </li>
+                    </ul>
+                    <p class="label pgph-sm">
+                        У вас будут шансы получить призы, только если
+                        выбранная<br />Вами сторона победит.
+                    </p>
+                    <p class="label pgph-sm">
+                        За выбор стороны Вы получите
+                        <span class="accent">+5 баллов</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="two-sides-dark-complete" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-sides"></i>
+                    <div class="game-title">две стороны силы</div>
+                    <p class="pgph">
+                        Тьма – это не самый легкий выбор, и за него вы получаете
+                        <span class="accent">+20 баллов</span>.
+                    </p>
+                    <p class="pgph pgph-sm">
+                        Надеемся, что победа будет на вашей стороне. Судьба
+                        Вселенной решится 31 декабря года.
+                    </p>
+                    <p class="pgph">
+                        А пока расскажите всем о своем выборе и привлеките
+                        друзей на свою сторону.
+                    </p>
+                    <a href="#" class="btn btn-blue">Продолжить</a>
+                    <div class="label">Поделиться</div>
+                    <ul class="social-list-sm">
+                        <li class="social-list-sm_item">
+                            <a class="social-link fb" href="#"></a>
+                        </li>
+                        <li class="social-list-sm_item">
+                            <a class="social-link vk" href="#"></a>
+                        </li>
+                        <li class="social-list-sm_item">
+                            <a class="social-link ok" href="#"></a>
+                        </li>
+                        <li class="social-list-sm_item">
+                            <a class="social-link tw" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="two-sides-light-complete" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-sides"></i>
+                    <div class="game-title">две стороны силы</div>
+                    <p class="pgph">
+                        Тьма – это не самый легкий выбор, и за него вы получаете
+                        <span class="accent">+20 баллов</span>.
+                    </p>
+                    <p class="pgph pgph-sm">
+                        Надеемся, что победа будет на вашей стороне. Судьба
+                        Вселенной решится 31 декабря года.
+                    </p>
+                    <p class="pgph">
+                        А пока расскажите всем о своем выборе и привлеките
+                        друзей на свою сторону.
+                    </p>
+                    <a href="#" class="btn btn-blue">Продолжить</a>
+                    <div class="label">Поделиться</div>
+                    <ul class="social-list-sm">
+                        <li class="social-list-sm_item">
+                            <a class="social-link fb" href="#"></a>
+                        </li>
+                        <li class="social-list-sm_item">
+                            <a class="social-link vk" href="#"></a>
+                        </li>
+                        <li class="social-list-sm_item">
+                            <a class="social-link ok" href="#"></a>
+                        </li>
+                        <li class="social-list-sm_item">
+                            <a class="social-link tw" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- НЕ ИГРОВЫЕ МОДАЛКИ -->
+
+        <div id="email-sent-modal" class="hex-modal site-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <div class="game-title">Письмо отправлено</div>
+                    <p class="pgph">
+                        Мы отправили вам письмо с подтверждением Перейдите по
+                        ссылке из письма для окончания регистрации.
+                    </p>
+                    <a href="#" class="btn">ок</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="login-modal" class="hex-modal site-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <div class="game-title">Войти</div>
+                    <p class="pgph">
+                        Введите ваш Логин - адрес электронной почты и пароль из
+                        письма подтверждения
+                    </p>
+
+                    <div class="form-container">
+                        <form action="#">
+                            <div
+                                class="form-group field-userwork-username required"
+                            >
+                                <div class="input-text">
+                                    <label
+                                        class="label-inside control-label"
+                                        for="userwork-username"
+                                        >Логин</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="login"
+                                        class="form-control"
+                                        name="UserWork[username]"
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                    />
+                                </div>
+                                <div class="help-block">
+                                    Необходимо заполнить Логин.
+                                </div>
+                            </div>
+
+                            <div
+                                class="form-group field-userwork-username required"
+                            >
+                                <div class="input-text">
+                                    <label
+                                        class="label-inside control-label"
+                                        for="userwork-username"
+                                        >Пароль</label
+                                    >
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        class="form-control"
+                                        name="UserWork[username]"
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                    />
+                                </div>
+                                <div class="help-block">
+                                    Необходимо заполнить Пароль.
+                                </div>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="btn btn--full btn-submit"
+                            >
+                                Войти
+                            </button>
+                        </form>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="label">Еще не регистрировались?</div>
+                    <a href="#" class="btn-reg">Зарегистрироваться</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="password-recovery-modal" class="hex-modal site-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <div class="game-title">Забыли Пароль?</div>
+                    <p class="pgph">
+                        Введите ваш адрес электронной почты, указанный при
+                        регистрации
+                    </p>
+
+                    <div class="form-container">
+                        <form action="#">
+                            <div
+                                class="form-group field-userwork-username required"
+                            >
+                                <div class="input-text">
+                                    <label
+                                        class="label-inside control-label"
+                                        for="userwork-username"
+                                        >Электронная почта</label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="login"
+                                        class="form-control"
+                                        name="UserWork[username]"
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                    />
+                                </div>
+                                <div class="help-block">
+                                    Необходимо заполнить Логин.
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-submit">
+                                Отправить пароль
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../materials/js/jquery.min.js"></script>
+        <script src="../materials/js/vendor/slick.min.js"></script>
+        <script src="../materials/js/jquery.fancybox.pack.js"></script>
+        <script src="../materials/js/game.js"></script>
+        <script src="../materials/js/main.js"></script>
+    </body>
+</html>

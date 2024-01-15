@@ -1,0 +1,86 @@
+[class^="ico-"]
+{
+	display: inline-block;
+	vertical-align: middle;
+	&::before {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+	}
+}
+
+.ico-doc::before {
+	background: url("../img/ico-doc.png") no-repeat;
+	background-size: contain;
+	width: 54px;
+	height: 61px;
+	margin: 0 12px;
+}
+
+.ico-chat::before {
+	background: url("../img/ico-chat.png") no-repeat;
+	background-size: contain;
+	width: 54px;
+	height: 61px;
+	margin: 0 12px;
+}
+
+.ico-person::before {
+	background: url("../img/icons/person.png") no-repeat;
+	background-size: 13px 17px;
+	width: 13px;
+	height: 17px;
+}
+
+.ico-photo::before {
+	background: url("../img/icons/photo.png") no-repeat;
+	background-size: 28px 32px;
+    width: 28px;
+    height: 32px;
+}
+
+.ico-check {
+	position: relative;
+	top: -3px;
+	margin-right: 6px;
+
+	&::before {
+		background: url("../img/icons/check.png") no-repeat;
+		background-size: 32px 20px;
+	    width: 32px;
+	    height: 20px;
+	}
+}
+
+.ico-close {
+	position: relative;
+	top: -3px;
+	margin-right: 6px;
+
+	&::before {
+		background: url("../img/icons/close.png") no-repeat;
+		background-size: 20px 20px;
+	    width: 20px;
+	    height: 20px;
+	}
+}
+
+.ico-marker {
+	position: relative;
+	top: -3px;
+	margin: 0 4px;
+	&::before {
+		background: url("../img/icons/marker.png") no-repeat;
+		background-size: 11px 15px;
+		width: 11px;
+		height: 15px;
+	}
+}
+@media screen and (min-width: 480px) {
+	.ico-photo::before {
+		background-size: 37px 43px;
+		width: 37px;
+		height: 43px;
+	}
+}

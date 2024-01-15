@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Shuffle Puzzle</title>
+
+	<!-- CSS style for Shuffle Puzzle-->
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/suffle_puzzle_with_message_box.css" type="text/css">
+	
+	<!-- JavaScript libraries -->
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.shufflepuzzle.min.js"></script>
+
+</head>
+<body>
+	<div id="Puzzle">
+		<div class="sp_box">
+			<div class="message-box">
+				<div>
+					<p class="mini">Gather the Suffle Puzzle</p>
+					<div class="retry-button bt1">Start</div>
+					<div class="retry-button bt2">Next</div>
+					<br>
+					<!--iframe class="bt_facebook" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fzzzpiu.com%2Fenvato%2Fshufflepuzzle&amp;layout=button_count&amp;show_faces=false&amp;width=115&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowtransparency="true"></iframe>
+					<iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fzzzpiu.com%2Fenvato%2Fshufflepuzzle%2F" style="width:110px; height:20px;"></iframe-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Your parameters for Shuffle Puzzle -->
+	<script type="text/javascript">
+		$(function(){
+			var c;
+			var config = {
+				img_puzzle: 'img/puzzle5.jpg',
+				width: 400,
+				height: 400,
+				auto_size: true,
+				showStart: true,
+				tilesH: 4,
+				tilesV: 4,
+				gap: true,
+				duration: 200,
+				bgColor: '#fff',
+				bgOpacity: 1,
+				imgBgOpacity: .2,
+				shuffleNum: 5,
+				stop: true,
+				firstStart: function () {
+					var images = ['img/puzzle.jpg', 'img/puzzle1.jpg', 'img/puzzle2.jpg', 'img/puzzle3.jpg', 'img/puzzle4.jpg', 'img/puzzle5.jpg'];
+					var num_img = 0;
+					var sh_num = 5
+					$(".sp_box").addClass('visible');
+					$(".retry-button.bt1").bind('mousedown touchstart', function(e) {
+						$('#Puzzle').shufflepuzzle['Puzzle']();
+					});
+					$(".retry-button.bt2").bind('mousedown touchstart', function(e) {
+						sh_num++;
+						num_img++;
+						num_img = num_img%images.length;
+
+						$('#Puzzle').shufflepuzzle['Puzzle']({
+							img_puzzle: images[num_img],
+							shuffleNum: sh_num
+						});
+					});
+				},
+				onStart: function () {
+					$(".sp_box").removeClass('visible');
+				},
+				onCompleted: function(){
+					$("p.mini").removeClass('mini')
+					$(".sp_box .retry-button.bt1").html('Try again');
+					$(".message-box > div > p").html("Congratulations!");
+					$(".sp_box").addClass('visible');
+
+					$(".retry-button.bt2").addClass('visible');
+				}
+			}
+			$('#Puzzle').shufflepuzzle(config);
+		});
+	</script>
+</body>
+</html>

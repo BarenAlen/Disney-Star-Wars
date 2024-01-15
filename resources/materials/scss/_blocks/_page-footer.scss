@@ -1,0 +1,24 @@
+.page-footer {
+	font-size: 12px;
+	display: table;
+	width: 100%;
+	height: 160px;
+	position: relative;
+
+	&_container {
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+
+		a:last-child {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-left: 43px;
+		}
+	}
+
+	.copyright {
+		margin-right: 120px;
+	}
+}

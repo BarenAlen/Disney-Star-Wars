@@ -1,0 +1,429 @@
+.game-preview {
+	// width: 320px;
+	// width: 100%;
+	width: 300px;
+	min-height: 330px;
+	margin: 0 auto;
+	background: url("../img/game/preview-idle-bg.png") no-repeat;
+	background-size: contain;
+	position: relative;
+    transform: scale(0.7);
+	padding: 0 8px;
+	top: -80px;
+    transition: .5s !important;
+
+	.game-title {
+		color: #fff;
+
+		&::before {
+			background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAAMCAYAAADs+hbCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDY0RTg4RTZDN0E2MTFFNzkzQTJERTJCRDI1NEM2NjgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDY0RTg4RTdDN0E2MTFFNzkzQTJERTJCRDI1NEM2NjgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NjRFODhFNEM3QTYxMUU3OTNBMkRFMkJEMjU0QzY2OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NjRFODhFNUM3QTYxMUU3OTNBMkRFMkJEMjU0QzY2OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po5+ThEAAAD2SURBVHja7Jk/CsIwHIXbIkIn3RQEJy/Q3QOIJ3D0AoKI4B8cRV0cdHf3EoKDzsUruLg4uHUzvkAEFyE1iRT6PvgohJLC45H2R30hhJeCFlzCA5zDh0eIRXzNQjbgBrY/1u5wCnfwySjJPwpZhjPYg8Uv98RwAI+Mk7gqZAC7cAErmnvt4QheGSuxWcgm3MLoh/0SuFZFThgvMSlkHa5gR64b7itPybE6NQVjJmkKGeI6hBMYWt7/rL4/Y0ZNdAt5w7Xq8BlyAr/kYBLvwxMrZUbBcRnfA1KUgyxLrJOdQhI7yJ8GNcZg/srm0EEyQ8AISJZ4CTAAERs5tSrUd/8AAAAASUVORK5CYII=");
+	 	}
+
+		&::after {
+			background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAMCAYAAAD8tppbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6M0E0RkFFMzBDN0E2MTFFN0I2NTBDNzA2RjBFODQxM0YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6M0E0RkFFMzFDN0E2MTFFN0I2NTBDNzA2RjBFODQxM0YiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozQTRGQUUyRUM3QTYxMUU3QjY1MEM3MDZGMEU4NDEzRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozQTRGQUUyRkM3QTYxMUU3QjY1MEM3MDZGMEU4NDEzRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpkRcV8AAADXSURBVHjaYvz//z8/AwPDB4ZRQA3wkWk0DKgLRgN0NEAHN2AB4r9AfHYE+BVUV6jQ2I4XjMBKaaQkHkYgjgDiDiCWo7LZoEq9BYgnj6QsD0o5y4FYA4hrgPgbFcz8B8TzgFgTiHuB+NdILEO/A3ErNBCWQwOaHHAAiE2AOBmU1UcrJQaGR0AcBcRWQHyCBH33gTgIiB2B+PxoLY8JTkADNQaIn+NR9wVaVGgD8frRZhPh8nUpEKtBi4PvWMpJbHKYNd8IquVJAXLQ1oACEGdjy9q4AECAAQDNrS6SaGvUrAAAAABJRU5ErkJggg==");
+		}
+	}
+
+	&_status {
+		text-transform: uppercase;
+		white-space: nowrap;
+		color: #fff;
+		position: relative;
+		margin-left: 4px;
+		visibility: hidden;
+		letter-spacing: 1px;
+		
+		top: 16px;
+		font-size: 10px;
+		font-weight: 600;
+
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			// background: $af-red;
+			border-width: 9px;
+			border-style: solid;
+			border-color: transparent;
+			border-left-color: $af-red;
+			border-top-width: 6px;
+			border-bottom-width: 6px;
+			margin-bottom: 1px;
+		}
+	}
+
+
+	&_col-left,
+	&_col-right {
+		width: 81px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		color: #fff;
+		position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+
+    	text-align: center;
+
+		font-size: 10px;
+		font-style: normal;
+		font-weight: 900;
+		text-transform: uppercase;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		[class^="h-ico-"] {
+			margin-bottom: 5px;
+		}
+	}
+
+	ul.game-preview_col-left,
+	ul.game-preview_col-right {
+		padding-top: 20px;
+		top: 8px;
+		transform: none;
+	}
+
+	&_col-left {
+		left: 20px;
+	}
+
+	&_col-right {
+		right: 19px;
+	}
+
+	&_col-label {
+		display: block !important;
+		text-transform: uppercase;
+		color: $af-red;
+		font-style: normal;
+		font-weight: 900;
+		margin-bottom: 5px;
+		white-space: nowrap;
+
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&_stats {
+		display: block;
+		vertical-align: middle;
+		text-align: center;
+		white-space: nowrap;
+		width: 34px;
+		height: 40px;
+		background: url("../img/game/activities-icons/hexagon.png") no-repeat;
+		background-size: contain;
+		color: #fff;
+		font-weight: 900;
+		font-style: normal;
+		margin: 0 auto;
+		margin-bottom: 5px;
+
+		line-height: 40px;
+		font-size: 12px;
+	}
+
+	&_btn {
+		text-align: center;
+		margin: 15px 0;
+
+		visibility: hidden;
+
+		.btn {
+			min-width: 226px;
+		}
+	}
+
+	&_icons {
+		text-align: center;
+		margin: 20px 0 6px;
+		position: relative;
+	}
+
+	&_icon-center {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -12px;
+	}
+
+	&_close {
+		border: 0;
+		background: url("../img/game/close.png") no-repeat;
+		background-size: contain;
+		position: absolute;
+    	z-index: 400;
+
+		width: 34px;
+		height: 40px;
+    	top: 5px;
+	    right: 8px;
+    	visibility: hidden;
+    	display: none;
+	}
+
+	&--locked,
+	&--finished {
+		.game-title {
+			color: #fff !important;
+			&::before {
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAAMCAYAAADs+hbCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDY0RTg4RTZDN0E2MTFFNzkzQTJERTJCRDI1NEM2NjgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDY0RTg4RTdDN0E2MTFFNzkzQTJERTJCRDI1NEM2NjgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NjRFODhFNEM3QTYxMUU3OTNBMkRFMkJEMjU0QzY2OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NjRFODhFNUM3QTYxMUU3OTNBMkRFMkJEMjU0QzY2OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po5+ThEAAAD2SURBVHja7Jk/CsIwHIXbIkIn3RQEJy/Q3QOIJ3D0AoKI4B8cRV0cdHf3EoKDzsUruLg4uHUzvkAEFyE1iRT6PvgohJLC45H2R30hhJeCFlzCA5zDh0eIRXzNQjbgBrY/1u5wCnfwySjJPwpZhjPYg8Uv98RwAI+Mk7gqZAC7cAErmnvt4QheGSuxWcgm3MLoh/0SuFZFThgvMSlkHa5gR64b7itPybE6NQVjJmkKGeI6hBMYWt7/rL4/Y0ZNdAt5w7Xq8BlyAr/kYBLvwxMrZUbBcRnfA1KUgyxLrJOdQhI7yJ8GNcZg/srm0EEyQ8AISJZ4CTAAERs5tSrUd/8AAAAASUVORK5CYII=") !important;
+		 	}
+
+			&::after {
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAMCAYAAAD8tppbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6M0E0RkFFMzBDN0E2MTFFN0I2NTBDNzA2RjBFODQxM0YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6M0E0RkFFMzFDN0E2MTFFN0I2NTBDNzA2RjBFODQxM0YiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozQTRGQUUyRUM3QTYxMUU3QjY1MEM3MDZGMEU4NDEzRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozQTRGQUUyRkM3QTYxMUU3QjY1MEM3MDZGMEU4NDEzRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpkRcV8AAADXSURBVHjaYvz//z8/AwPDB4ZRQA3wkWk0DKgLRgN0NEAHN2AB4r9AfHYE+BVUV6jQ2I4XjMBKaaQkHkYgjgDiDiCWo7LZoEq9BYgnj6QsD0o5y4FYA4hrgPgbFcz8B8TzgFgTiHuB+NdILEO/A3ErNBCWQwOaHHAAiE2AOBmU1UcrJQaGR0AcBcRWQHyCBH33gTgIiB2B+PxoLY8JTkADNQaIn+NR9wVaVGgD8frRZhPh8nUpEKtBi4PvWMpJbHKYNd8IquVJAXLQ1oACEGdjy9q4AECAAQDNrS6SaGvUrAAAAABJRU5ErkJggg==") !important;
+			}
+		}
+
+		.g-ico-stars::before {
+			background-image: url("../img/game/activities-icons/stars.png") !important;
+		}
+
+		.g-ico-friends::before {
+			background-image: url("../img/game/activities-icons/friends.png") !important;
+		}
+
+		.g-ico-helmet::before {
+			background-image: url("../img/game/activities-icons/helmet.png") !important;
+		}
+
+		.g-ico-gem::before {
+			background-image: url("../img/game/activities-icons/gem.png") !important;
+		}
+
+		.g-ico-map::before {
+			background-image: url("../img/game/activities-icons/map.png") !important;
+		}
+
+		.g-ico-radar::before {
+			background-image: url("../img/game/activities-icons/radar.png") !important;
+		}
+
+		.g-ico-snowflake::before {
+			background-image: url("../img/game/activities-icons/snowflake.png") !important;
+		}
+
+		.g-ico-tickets::before {
+			background-image: url("../img/game/activities-icons/tickets.png") !important;
+		}
+
+		.g-ico-sides::before {
+			background-image: url("../img/game/activities-icons/sides.png") !important;
+		}
+	}
+
+	&--locked {
+		.game-preview_icons {
+
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 81px;
+				height: 95px;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				background: url("../img/game/activities-icons/lock.png") no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+
+	@media screen and (min-width: 480px) {
+		width: 412px;
+		min-height: 376px;
+		padding: 0 30px;
+
+		&_status {
+			top: 23px;
+			font-size: 12px;
+			font-weight: 900;
+			margin-left: 12px;
+		}
+
+		&_close {
+			width: 44px;
+			height: 51px;
+	    	top: 7px;
+    		right: 17px;
+	    	visibility: hidden;
+		}
+
+		&--locked {
+			.game-preview_icons {
+				&::after {
+					width: 91px;
+					height: 105px;
+				}
+			}
+		}
+
+		&_col-left,
+		&_col-right {
+			width: 100px;
+			font-size: 11px;
+		}
+
+		&_stats {
+			font-size: 14px;
+			width: 46px;
+			height: 52px;
+			line-height: 52px;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		&_close {
+			display: block;
+		}
+	}
+}
+
+.slick-current {
+
+	.game-preview {
+	    transform: scale(1);
+	    background: url("../img/game/preview-active-bg.png") no-repeat;
+	    background-size: contain;
+		background-position-y: top;
+		background-position-x: -9px;
+		top: 0;
+
+		.game-title {
+			color: $af-blue;
+
+			&::before {
+				background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAAAMCAYAAADs+hbCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjY1RTdDNDhDNkQyMTFFNzlBREZBQzIwRkI0QUVBQjgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjY1RTdDNDlDNkQyMTFFNzlBREZBQzIwRkI0QUVBQjgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGNjVFN0M0NkM2RDIxMUU3OUFERkFDMjBGQjRBRUFCOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGNjVFN0M0N0M2RDIxMUU3OUFERkFDMjBGQjRBRUFCOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Puj03l0AAAD7SURBVHja7JmxCkFRHIeP202ZGJRbyuQBmElGeQJWZTMoKxbK4gmUlSeQSQqjxaCU8gyeQH6njsUgxzkncn9ffYt7O+rf1/92u74o9YUGFTiCKziEV0GIRbw378vCBVzCHOzAM2xqnEGIcZAJOIZHWH26loQTuIdljpK4DFL+3oAntQ2jL87IwzWcwwxHSmwHWVRbbwpTGmfVVMADGONoiWmQcrvN4EZtvU+QIXZVmHUY4YiJbpAyop7liB5xbw3iJiHEhxcYODq/oB7/B3j781m24Y5JmQcZOP4PLyRbMs6c7ARJ7CA/GqQ5Bgb5K7Q4Artv2YR8nbsAAwBNOB6yoj76GQAAAABJRU5ErkJggg==");
+			}
+
+			&::after {
+				background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAMCAYAAAD8tppbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDFBQTMwRkZDNkQzMTFFNzgzMkE5NzkwNzYxNjE2RDQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDFBQTMxMDBDNkQzMTFFNzgzMkE5NzkwNzYxNjE2RDQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowMUFBMzBGREM2RDMxMUU3ODMyQTk3OTA3NjE2MTZENCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowMUFBMzBGRUM2RDMxMUU3ODMyQTk3OTA3NjE2MTZENCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pu0kJsIAAADmSURBVHjaYmSwq+NnYGD4wDAKqAE+Mo2GAXXBaICOBujgBixA/BeIz44Av4LqChUa2/ECFKBfgNhkBAQoIxBHAHEHEMtR2WxQpd4CxJOZGeTtR1KOvALEM4H4OxBbADErheb9A+L5QBwExLtBuX0klqGgwGwFYk0gXg7E/8k05wA0ZyeDsvpopcTA8AiIo4DYCohPkKDvPjRFOgLx+dFaHhOcgAZqDBA/x6MOVNfUALE2EK/HpWiklaH4wGVo+QoqAkyRyldYORkIxNuA+A/+ms+ubjQoMYEctDWgAMTZ2LI2LgAQYAD0zih5qATZRAAAAABJRU5ErkJggg==");
+			}
+		}
+	}
+
+	.game-preview_status,
+	.game-preview_close,
+	.game-preview_btn {
+		visibility: visible;
+	}
+
+	.game-preview_icons {
+		margin: 32px 0 5px;
+	}
+
+	@media screen and (min-width: 480px) {
+		.game-preview {
+			background-position-x: -12px;
+		}
+
+		.game-preview_icons {
+			margin: 41px 0 16px;
+		}
+	}
+}
+
+.g-ico-stars::before {
+	background-image: url("../img/game/activities-icons/stars-active.png");
+}
+
+.g-ico-friends::before {
+	background-image: url("../img/game/activities-icons/friends-active.png");
+}
+
+.g-ico-helmet::before {
+	background-image: url("../img/game/activities-icons/helmet-active.png");
+}
+
+.g-ico-gem::before {
+	background-image: url("../img/game/activities-icons/gem-active.png");
+}
+
+.g-ico-map::before {
+	background-image: url("../img/game/activities-icons/map-active.png") !important;
+}
+
+.g-ico-radar::before {
+	background-image: url("../img/game/activities-icons/radar-active.png") !important;
+}
+
+.g-ico-snowflake::before {
+	background-image: url("../img/game/activities-icons/snowflake-active.png") !important;
+}
+
+.g-ico-tickets::before {
+	background-image: url("../img/game/activities-icons/tickets-active.png") !important;
+}
+
+.g-ico-sides::before {
+	background-image: url("../img/game/activities-icons/sides-active.png") !important;
+}
+
+.g-ico-first-order::before {
+	background-image: url("../img/game/activities-icons/first-order.png") !important;
+}
+
+.g-ico-resistance::before {
+	background-image: url("../img/game/activities-icons/resistance.png") !important;
+}
+
+[class^="g-ico-"] {
+	display: inline-block;
+	vertical-align: middle;
+	&::before {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+		background-repeat: no-repeat;
+		background-size: contain;
+	    width: 81px;
+    	height: 95px;
+	}
+
+	@media screen and (min-width: 480px) {
+		&::before {
+			width: 91px;
+			height: 105px;
+		}
+	}
+}
+
+[class^="h-ico-"] {
+	display: inline-block;
+	vertical-align: middle;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 34px;
+		height: 40px;
+	}
+
+	@media screen and (min-width: 480px) {
+		&::before {
+			width: 47px;
+			height: 52px;
+		}
+	}
+}
+
+.h-ico-check::before {
+	background-image: url("../img/game/activities-icons/check.png");
+}
+
+.h-ico-warning::before {
+	background-image: url("../img/game/activities-icons/exclamation.png");
+}

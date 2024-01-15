@@ -1,0 +1,24 @@
+.page-header {
+    display: table;
+    width: 100%;
+    height: 100px;
+    
+    &--fixed {
+        width: auto;
+        position: fixed;
+        top: 0;
+        z-index: 210; 
+    }
+
+    &_container {
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    &_logo {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,440 @@
+.hex-modal {
+	text-align: center;
+	display: none;
+
+	[class^="g-ico-"] {
+		margin-bottom: 10px;
+	}
+
+	&_container {
+		width: 100%;
+		margin: 0 auto;
+		padding-top: 80px;
+	}
+
+	&_content {
+		max-width: 550px;
+		margin: 0 auto;
+	}
+
+	.game-title {
+		max-width: 350px;
+	}
+
+	.form-container {
+		max-width: 256px;
+		margin: 0 auto;
+	}
+
+	.btn {
+		min-width: 256px;
+	}
+
+	@media screen and (min-width: 480px) {
+		&_container {
+			max-width: 720px;
+			margin: 0 auto;
+		}
+
+		&_content {
+			// min-width: 410px;
+		}
+	}
+
+	@media screen and (min-width: 520px) {
+		&_row {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			text-align: center;
+		}
+
+		&_col {
+			flex-grow: 1;
+			flex-shrink: 1;
+		}
+	}
+}
+
+.postcard-fancybox-wrap {
+
+	.hex-modal_content {
+		max-width: 600px;
+	}
+
+	.hex-modal_container {
+		padding-top: 0;
+	}
+
+	.hex-modal {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.fancybox-inner {
+		// width: 100% !important;
+	}
+
+	.fancybox-image {
+		// max-width: 666px !important;
+		// height: auto !important;
+		// width: 100% !important;
+		// position: absolute;
+		// left: 30px;
+		// top: 50%;
+		// transform: translateY(-50%);
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.fancybox-skin {
+		.fancybox-close {
+			right: -111px;
+			top: 77px;
+		}
+	}
+}
+
+.login-popup-wrap {
+
+	.hex-modal_container {
+		padding-top: 80px;
+	}
+}
+
+.site-modal {
+	.pgph {
+		margin: 20px 0 20px;
+	}
+}
+
+.fancybox-wrap {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    max-width: 720px !important;
+    overflow: hidden;
+}
+
+.fancybox-overlay {
+	background-image: url("../img/fancybox/overlay.png");
+	background-repeat: repeat;
+}
+
+.fancybox-skin {
+	background: none;
+	box-shadow: none !important;
+	color: $af-blue;
+
+
+	.hex-modal_content {
+		opacity: 0;
+		transition: opacity .5s .4s;
+	}
+
+	.fancybox-close {
+		opacity: 0;
+		transition: opacity .2s 0s;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		background-image: url("../img/fancybox/hex/hex-50.png"),
+		                  url("../img/fancybox/hex/hex-50.png"),
+		                  url("../img/fancybox/hex/hex-50.png"),
+		                  url("../img/fancybox/hex/hex-50.png"),
+		                  url("../img/fancybox/hex/hex-50.png"),
+		                  url("../img/fancybox/hex/hex-50.png");
+		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+		background-position: center, center, center, center, center, center;
+		background-size: 0 0, 0 0, 0 0, 0 0, 0 0;
+		width: 100%;
+		height: 999px;
+		left: calc(50%);
+		top: 50%;
+		transform: translate(-50%,-50%);
+		z-index: -1;
+	}
+
+	&.opening {
+
+
+		&::after {
+			animation-name: opening;
+    		animation-duration: .8s;
+    		animation-fill-mode: forwards;
+    		animation-timing-function: ease-in;
+		}
+
+		.hex-modal_content,
+		.fancybox-close {
+			opacity: 1;
+		}
+
+		.fancybox-close {
+			transition: opacity .2s .7s;
+		}
+	}
+
+	&.closing {
+
+		&:after {
+			animation-name: closing;
+    		animation-duration: .8s;
+    		animation-fill-mode: forwards;
+    		animation-timing-function: ease-out;
+    		background-size: 605px 696px, 660px 757px, 717px 835px, 770px 883px, 819px 940px, 871px 999px;
+		}
+	}
+
+	&.opened {
+
+		&::after {
+			background-size: 302px 348px, 660px 757px, 717px 835px, 770px 883px, 819px 940px, 871px 999px;
+		}
+
+		.hex-modal_content,
+		.fancybox-close {
+			opacity: 1;
+		}
+	}
+
+	@media screen and (min-width: 720px) {
+		&::after {
+			width: 871px;
+		}
+	}
+}
+
+@keyframes opening {
+	0%   {background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;}
+    16%  {background-size: 302px 348px, 302px 348px, 302px 348px, 302px 348px, 302px 348px, 302px 348px;}
+    33%  {background-size: 302px 348px, 605px 696px, 605px 696px, 605px 696px, 605px 696px, 605px 696px;}
+    50%  {background-size: 302px 348px, 605px 696px, 717px 835px, 717px 835px, 717px 835px, 717px 835px;}
+    68%  {background-size: 302px 348px, 660px 757px, 717px 835px, 770px 883px, 770px 883px, 770px 883px;}
+    82%  {background-size: 302px 348px, 660px 757px, 717px 835px, 770px 883px, 819px 940px, 819px 940px;}
+    100% {background-size: 302px 348px, 660px 757px, 717px 835px, 770px 883px, 819px 940px, 871px 999px;}
+}
+
+@keyframes closing {
+    100% {background-size: 302px 348px, 660px 757px, 717px 835px, 770px 883px, 819px 940px, 871px 999px;}
+    16%  {background-size: 302px 348px, 660px 757px, 717px 835px, 770px 883px, 819px 940px, 819px 940px;}
+    33%  {background-size: 302px 348px, 660px 757px, 717px 835px, 770px 883px, 770px 883px, 770px 883px;}
+    50%  {background-size: 302px 348px, 605px 696px, 717px 835px, 717px 835px, 717px 835px, 717px 835px;}
+    68%  {background-size: 302px 348px, 605px 696px, 605px 696px, 605px 696px, 605px 696px, 605px 696px;}
+    82%  {background-size: 302px 348px, 302px 348px, 302px 348px, 302px 348px, 302px 348px, 302px 348px;}
+	100%   {background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;}
+}
+
+.faq-popup-wrap {
+	.fancybox-skin {
+		&::after {
+			display: none;
+		}
+	}
+
+	&.fancybox-opened {
+		.fancybox-skin {
+			opacity: 1;
+			transition: opacity .4s;
+		}
+	}
+}
+
+.skrollr-mobile.fancybox-lock {
+    overflow: hidden !important;
+}
+
+.fancybox-lock .fancybox-overlay {
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.fancybox-inner {
+	overflow: hidden !important;
+}
+
+.fancybox-title {
+	display: none !important;
+}
+
+.center-content-wrap {
+	.hex-modal {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@media screen and (min-width: 768px) {
+		.hex-modal {
+			top: calc(50% - 60px);
+		}
+	}
+}
+
+.skrollr-mobile .center-content-wrap {
+	@media screen and (max-width: 700px) {
+		overflow-y: scroll !important;
+	}
+}
+
+.star-map-game-wrap {
+
+	.hex-modal_content,
+	.fancybox-close {
+		opacity: 1;
+	}
+
+	.fancybox-skin {
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			background-image: url("../img/game/star-map-bg.png");
+			background-repeat: no-repeat;
+			background-size: 720px 826px;
+			background-position: center;
+			width: 720px;
+			height: 826px;
+			top: 50%;
+			left: calc(50% + 2px);
+			transform: translate(-50%, -50%);
+		}
+
+		&::after {
+			background-size: 605px 696px, 660px 757px, 717px 835px, 770px 883px, 819px 940px, 871px 999px;
+		}
+	}
+
+	.fancybox-inner {
+		max-width: 720px !important;
+	}
+
+	@media screen and (min-width: 480px) {
+		.fancybox-skin::after {
+			font-size: 48px;
+		}
+	}
+}
+
+.gems-game-wrap {
+
+	.hex-modal_content,
+	.fancybox-close {
+		opacity: 1;
+	}
+
+	.fancybox-skin {
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			background-image: url("../img/game/gems-bg.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 720px;
+			height: 826px;
+			top: 50%;
+			left: calc(50% + 2px);
+			transform: translate(-50%, -50%);
+		}
+
+		&::after {
+			background-size: 605px 696px, 660px 757px, 717px 835px, 770px 883px, 819px 940px, 871px 999px;
+		}
+	}
+
+	.fancybox-inner {
+		max-width: 390px !important;
+		margin: 0 auto;
+	}
+
+	iframe {
+		position: absolute;
+		top: calc(50% - 10px);
+		transform: translateY(-50%);
+
+		left: 0;
+	}
+
+	@media screen and (min-width: 480px) {
+		.fancybox-skin::after {
+			font-size: 48px;
+		}
+
+		iframe {
+			top: calc(50% - 30px);
+		}
+	}
+
+}
+
+.game-fancybox-wrap {
+	.fancybox-inner {
+		max-width: 720px !important;
+	}
+}
+
+#last-jedi,
+#last-jedi-decline,
+#last-jedi-win {
+	.btn {
+		min-width: 196px;
+	}
+}
+
+#cinema-popup {
+	width: 100%;
+	.hex-modal_container {
+   		max-width: 440px;
+   	}
+}
+
+#last-jedi-share {
+	.form-group {
+		max-width: 420px;
+		margin: 0 auto;
+	}
+}
+
+
+.fancybox-close {
+	background-image: url("../img/fancybox/close.png");
+	background-repeat: no-repeat;
+	background-position: center;
+
+    background-size: 54px 64px;
+	width: 54px;
+	height: 64px;
+    top: 0px;
+    right: 5px;
+}
+
+@media screen and (min-width: 690px) {
+	.fancybox-close {
+		background-size: 69px 79px;
+		width: 69px;
+		height: 79px;
+	}
+}
+
+@media screen and (min-width: 980px) {
+	.fancybox-close {
+	    right: -110px;
+    	top: 60px;
+	}
+
+	.game-fancybox-wrap .fancybox-close {
+		top: 110px;
+	}
+}
+
+// .postcard-light {
+// 	background: url("../img/game/postcard-light.jpg");
+// 	background-repeat: no-repeat;
+// }

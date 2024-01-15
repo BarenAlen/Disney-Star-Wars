@@ -1,0 +1,129 @@
+@import "slick.scss";
+
+
+.game-slider {
+	position: relative;
+	padding: 20px 0 10px;
+	z-index: 50;
+	display: block;
+
+	flex-grow: 1;
+	flex-shrink: 1;
+	max-height: 413px;
+
+	.btn {
+		transition: 0s;
+		&::before {
+			transition: 0s;
+		}
+	}
+
+	.slick-list {
+		padding: 20px 0 2px !important;
+	}
+
+	.slick-disabled {
+		opacity: 0;
+		transition: .15s;
+	}
+
+	&_item {
+		// float: left;
+	}
+
+	&_nav {
+		width: 312px;
+		margin: 0 auto;
+		position: absolute;
+		z-index: 219;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 137px;
+	}
+
+	&_prev,
+	&_next {
+		display: inline-block;
+		vertical-align: middle;
+		background: url("../img/game/slider-arrow.png") no-repeat;
+		background-size: contain;
+		width: 34px;
+		height: 40px;
+		border: 0;
+		position: absolute;
+		cursor: pointer;
+		z-index: 10;
+	}
+
+	&_prev {
+		transform: rotate(180deg);
+		left: -1px;
+	}
+
+	&_next {
+		right: -2px;
+	}
+
+	@media screen and (min-width: 480px) {
+		margin-top: 0;
+
+		&_nav {
+			width: 422px;
+			top: 174px;
+		}
+
+		&_prev,
+		&_next {
+			width: 44px;
+			height: 51px;
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		opacity: 0;
+		padding: 0;
+
+		&_nav {
+			top: 154px;
+		}
+	}
+
+	@media screen and (min-width: 1340px) {
+		width: 100%;
+		margin: 0 auto;
+		max-width: 1140px;
+	}
+
+	@media screen and (min-width: 1440px) and (min-height: 900px) {
+		padding-bottom: 240px;
+	}
+}
+
+.blink {
+	animation-name: blink;
+ 	animation-duration: .7s;
+}
+
+.slick-arrow {
+	&:focus {
+		outline: 1px solid #fff;
+	}
+}
+
+@keyframes blink {
+    0%   {opacity: 1;}
+    50%  {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#game-slider {
+    width: 40000px;
+}
+#game-slider.slick-initialized {
+    width: auto;
+}
+#game-slider .game-slider_item {
+    // float: left;
+    display: inline-block;
+    vertical-align: middle;
+}

@@ -1,0 +1,67 @@
+.i-prize {
+	
+	&_title {
+		font-size: 20px;
+		font-weight: 900;
+		text-transform: uppercase;
+		line-height: 1;
+		color: $af-red;
+		margin-bottom: 34px;
+		position: relative;
+		padding-top: 120px;
+
+		span {
+		    font-size: 48px;
+    		font-weight: 600;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: -1;
+		}
+	}
+
+	&--miles {
+		.i-prize_title {
+			
+			&::after  {
+				width: 432px;
+				height: 153px;
+				background: url("../img/prize1.png") no-repeat;
+				background-size: contain;
+
+				left: -140px;
+				top: 0;
+			}
+		}
+	}
+
+	&--tickets {
+		.i-prize_title {
+			&::after  {
+				width: 377px;
+				height: 194px;
+				background: url("../img/prize2.png") no-repeat;
+				background-size: contain;
+
+				left: -10px;
+			    top: -17px;
+			}
+		}
+	}
+}
+
+.i-prize-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.i-prize {
+		flex-shrink: 1;
+		flex-grow: 1;
+		flex-basis: 50%;
+		margin: 10px 20px;
+	}
+}

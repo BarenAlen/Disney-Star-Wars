@@ -1,0 +1,40 @@
+.pagination {
+
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	max-width: 320px;
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: 5px;
+
+		a {
+			display: block;
+			vertical-align: middle;
+			width: 54px;
+			height: 62px;
+			line-height: 62px;
+			text-align: center;
+			font-size: 16px;
+			text-decoration: none;
+			color: #fff;
+			background: url("../img/hex-sm-red.png") no-repeat;
+		}
+
+		&.active {
+
+			a {
+				background: url("../img/hex-sm-blue.png") no-repeat;
+			}
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		text-align: left;
+		margin: 0;
+		max-width: 100%;
+	}
+}

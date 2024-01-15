@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="../materials/css/style.css" rel="stylesheet" />
+        <title></title>
+    </head>
+    <body>
+        <div class="game-screen">
+            <header class="page-header">
+                <div class="page-header_container">
+                    <a href="index.html" class="page-header_logo">
+                        <img
+                            src="../materials/img/ab-logo.png"
+                            srcset="../materials/img/ab-logo_2x.png 2x"
+                            alt="Аэрофлот Бонус"
+                            width="150"
+                        />
+                    </a>
+
+                    <nav class="main-nav">
+                        <button
+                            type="button"
+                            id="main-nav-toggler"
+                            data-type="static"
+                            class="main-nav-open main-nav-toggler"
+                        ></button>
+                        <div class="main-nav_content">
+                            <div class="main-nav_container">
+                                <button
+                                    type="button"
+                                    data-type="static"
+                                    class="main-nav-close main-nav-toggler"
+                                ></button>
+                                <ul class="main-nav_menu">
+                                    <li>
+                                        <a class="main-nav_menu_item" href="#"
+                                            >Об акции</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="main-nav_menu_item" href="#"
+                                            >Призы</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="main-nav_menu_item" href="#"
+                                            >Победители</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="main-nav_menu_item" href="#"
+                                            >Обратная связь</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a class="main-nav_link" href="#"
+                                            >Войти</a
+                                        >
+                                    </li>
+                                </ul>
+
+                                <ul class="main-nav_soc-list">
+                                    <li>
+                                        <a
+                                            class="main-nav_soc-list_item fb"
+                                            href="#"
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="main-nav_soc-list_item vk"
+                                            href="#"
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="main-nav_soc-list_item ok"
+                                            href="#"
+                                        ></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="game-screen_bg distort-bg"></div>
+
+            <div class="game-slider">
+                <div class="game-slider_nav" id="game-slider-nav">
+                    <button
+                        class="game-slider_prev"
+                        id="game-slider-prev"
+                        type="button"
+                    ></button>
+                    <button
+                        class="game-slider_next"
+                        id="game-slider-next"
+                        type="button"
+                    ></button>
+                </div>
+                <div id="game-slider">
+                    <div class="game-slider_item">
+                        <div class="game-preview">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-helmet"></i>
+                            </div>
+                            <div class="game-title">Заявка на вылет</div>
+                            <div class="game-preview_btn">
+                                <a href="#fly-out" class="btn fancybox"
+                                    >начать задание</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-stars"></i>
+                            </div>
+                            <div class="game-title">Звездная карта</div>
+                            <div class="game-preview_btn">
+                                <a href="#star-map" class="fancybox btn"
+                                    >начать задание</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-friends"></i>
+                            </div>
+                            <div class="game-title">Верные друзья</div>
+                            <div class="game-preview_btn">
+                                <a href="#loyal-friends" class="btn fancybox"
+                                    >начать задание</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-gem"></i>
+
+                                <ul class="game-preview_col-left">
+                                    <li>
+                                        <i class="h-ico-warning"></i>
+                                        доступно до 11.12.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="game-title">Энергия кристаллов</div>
+                            <div class="game-preview_btn">
+                                <a href="#crystal-energy" class="btn fancybox"
+                                    >начать задание</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-radar"></i>
+                            </div>
+                            <div class="game-title">Потерянные координаты</div>
+                            <div class="game-preview_btn">
+                                <a href="#lost-coordinates" class="btn fancybox"
+                                    >начать задание</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-sides"></i>
+                            </div>
+                            <div class="game-title">Две стороны силы</div>
+                            <div class="game-preview_btn">
+                                <a href="#two-sides" class="btn fancybox"
+                                    >начать задание</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-tickets"></i>
+                            </div>
+                            <div class="game-title">Последние джедаи</div>
+                            <div class="game-preview_btn">
+                                <p class="pgph">Вы получили приглашение</p>
+                                <ul class="btn-list">
+                                    <li>
+                                        <a href="#" class="btn btn-blue"
+                                            >Отказаться</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#" class="btn">Принять</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-snowflake"></i>
+
+                                <div class="game-preview_col-left">
+                                    Доступно с 20.12.
+                                </div>
+                            </div>
+                            <div class="game-title">Миссия<br />2018</div>
+                            <div class="game-preview_btn">
+                                <a href="#last-mission" class="fancybox btn"
+                                    >начать задание</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--locked">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-snowflake"></i>
+
+                                <div class="game-preview_col-left">
+                                    Доступно с 20.12.
+                                </div>
+                            </div>
+                            <div class="game-title">Миссия<br />2018</div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--locked">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-stars"></i>
+                            </div>
+                            <div class="game-title">Звездная карта</div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--locked">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-helmet"></i>
+                            </div>
+                            <div class="game-title">Заявка на вылет</div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--locked">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-gem"></i>
+                            </div>
+                            <div class="game-title">Энергия кристаллов</div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--locked">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-radar"></i>
+                            </div>
+                            <div class="game-title">Потерянные координаты</div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--locked">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-sides"></i>
+                            </div>
+                            <div class="game-title">Две стороны силы</div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--locked">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-friends"></i>
+                            </div>
+                            <div class="game-title">Верные друзья</div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--locked">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span class="accent">не выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-tickets"></i>
+                            </div>
+                            <div class="game-title">Последние джедаи</div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--finished">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: открыта
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-snowflake"></i>
+                                <i
+                                    class="h-ico-check game-preview_icon-center"
+                                ></i>
+                            </div>
+                            <div class="game-title">Миссия<br />2018</div>
+                            <div class="game-preview_btn">
+                                <a href="#last-jedi" class="btn fancybox"
+                                    >Начать задание</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--finished">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: пройдено
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-stars"></i>
+                                <i
+                                    class="h-ico-check game-preview_icon-center"
+                                ></i>
+                            </div>
+                            <div class="game-title">Звездная карта</div>
+                            <div class="game-preview_btn">
+                                <a href="#" class="btn">пройти ещё раз</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--finished">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: получена
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-helmet"></i>
+                                <i
+                                    class="h-ico-warning game-preview_icon-center"
+                                ></i>
+                            </div>
+                            <div class="game-title">Заявка на вылет</div>
+                            <div class="game-preview_btn">
+                                <a href="#" class="btn">посмотреть</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--finished">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: <span>выполнено</span>
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-gem"></i>
+                                <i
+                                    class="h-ico-check game-preview_icon-center"
+                                ></i>
+
+                                <ul class="game-preview_col-left">
+                                    <li>
+                                        <i class="game-preview_stats">+25</i>
+                                        Баллов
+                                    </li>
+                                </ul>
+
+                                <ul class="game-preview_col-right">
+                                    <li>
+                                        <i class="game-preview_stats">01:00</i>
+                                        Время
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="game-title">Энергия кристаллов</div>
+                            <div class="game-preview_btn">
+                                <a href="#" class="btn">пройти заново</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--finished">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: найдены
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-radar"></i>
+                                <i
+                                    class="h-ico-warning game-preview_icon-center"
+                                ></i>
+                            </div>
+                            <div class="game-title">Потерянные координаты</div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--finished">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: сопротивление
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-sides"></i>
+                                <ul class="game-preview_col-left">
+                                    <li>
+                                        <i class="game-preview_stats">+5</i>
+                                        Баллов
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="game-title">Две стороны силы</div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--finished">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: пройдено
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-friends"></i>
+                                <i
+                                    class="game-preview_stats game-preview_icon-center"
+                                    >17/25</i
+                                >
+
+                                <ul class="game-preview_col-left">
+                                    <li class="game-preview_col-label">
+                                        Откликнулось
+                                    </li>
+                                    <li>
+                                        <i class="game-preview_stats">5</i>
+                                        <i class="ico-person"></i>
+                                    </li>
+                                    <li>
+                                        <i class="game-preview_stats">+5</i>
+                                        Баллов
+                                    </li>
+                                </ul>
+
+                                <ul class="game-preview_col-right">
+                                    <li class="game-preview_col-label">
+                                        Верные друзья
+                                    </li>
+                                    <li>
+                                        <i class="game-preview_stats">10</i>
+                                        <i class="ico-person"></i>
+                                    </li>
+                                    <li>
+                                        <i class="game-preview_stats">+40</i>
+                                        Баллов
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="game-title">Верные друзья</div>
+                            <div class="game-preview_btn">
+                                <a href="#" class="btn">пригласить друга</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-slider_item">
+                        <div class="game-preview game-preview--finished">
+                            <button
+                                class="game-preview_close game-preview-close"
+                                type="button"
+                            ></button>
+                            <div class="game-preview_status">
+                                Статус: получены
+                            </div>
+                            <div class="game-preview_icons">
+                                <i class="g-ico-tickets"></i>
+                                <i
+                                    class="h-ico-warning game-preview_icon-center"
+                                ></i>
+
+                                <div class="game-preview_col-left">
+                                    вы приглашены на премьеру. Получите билеты
+                                </div>
+
+                                <div class="game-preview_col-right">
+                                    13.12. <br />в 21:00<br />Москва,
+                                    КТ&nbsp;«Октябрь»
+                                </div>
+                            </div>
+                            <div class="game-title">Последние джедаи</div>
+                            <div class="game-preview_btn">
+                                <a href="#last-jedi" class="btn fancybox"
+                                    >получить билеты</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-screen_toggler">
+                <button
+                    type="button"
+                    class="game-screen_toggler_btn game-slider-toggler"
+                >
+                    <span class="arm"></span>
+                </button>
+            </div>
+
+            <div class="profile">
+                <div class="profile_container">
+                    <div class="profile_pic">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 102.5 117.5"
+                        >
+                            <defs>
+                                <pattern
+                                    id="profile-img"
+                                    x="-10"
+                                    y="0"
+                                    patternUnits="userSpaceOnUse"
+                                    width="116"
+                                    height="116"
+                                >
+                                    <image
+                                        xlink:href="../materials/img/profile.png"
+                                        x="0"
+                                        y="0"
+                                        width="120"
+                                        height="120"
+                                        preserveAspectRatio="xMidYMin slice"
+                                    />
+                                </pattern>
+                            </defs>
+                            <path
+                                fill="url(#profile-img)"
+                                d="M0 87.6l.7-58.8L51.9 0l50.6 30-.7 58.8-51.2 28.7"
+                            />
+                            <path
+                                class="mix"
+                                fill="#e62440"
+                                d="M0 87.6l.7-58.8L51.9 0l50.6 30-.7 58.8-51.2 28.7"
+                            />
+                        </svg>
+                        <a href="#" class="profile_pic_btn"
+                            ><i class="ico-photo"></i
+                        ></a>
+                    </div>
+
+                    <div>
+                        <div class="profile_name">
+                            Александра Александровская
+                        </div>
+                        <div class="profile_points">32 балла</div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="game-footer">
+                <div class="game-footer_container">
+                    <div class="game-footer_col">
+                        <div class="game-footer_premiere">
+                            <img
+                                class="game-footer_sw-logo"
+                                src="../materials/img/game/sw-logo.png"
+                                width="124"
+                                height="44"
+                                alt="Звездные войны. Последние джедаи"
+                            />
+                            <div>В КИНО С 14 ДЕКАБРЯ</div>
+                        </div>
+                    </div>
+                    <div class="game-footer_col">
+                        <span class="copyright">&copy; Аэрофлот</span>
+                        <span class="lucas-film-copyright"
+                            >&copy; &amp; TM Lucasfilm Ltd.</span
+                        >
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- ЗАЯВКА НА ВЫЛЕТ -->
+
+        <div id="fly-out" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-helmet"></i>
+                    <div class="game-title">Заявка на вылет</div>
+                    <p class="pgph">
+                        Чтобы отправиться в полет к месту противостояния,
+                        заполните заявку и получите разрешение на вылет.
+                    </p>
+                    <p class="pgph">
+                        Вы получите <span class="accent">+1 балл</span> за
+                        точное заполнение заявки на&nbsp;вылет.
+                    </p>
+                    <a href="#fly-out-complete" class="btn">Начать задание</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="fly-out-complete" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-helmet"></i>
+                    <div class="game-title">Заявка на вылет</div>
+                    <p class="pgph offset-lg">
+                        Вы получаете <span class="accent">+1 балл</span> за
+                        точное заполнение<br />
+                        заявки на вылет.
+                    </p>
+                    <a href="#" class="btn-continue">Продолжить</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ЗВЕЗДНАЯ КАРТА -->
+
+        <div id="star-map" class="hex-modal hex-modal-game star-map-game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-stars"></i>
+                    <div class="game-title">Звездная карта</div>
+                    <p class="pgph offset-top-lg">
+                        Для того, чтобы определиться с маршрутом полета,<br />Вам
+                        нужно собрать карту звездного неба.<br />У Вас есть
+                        ровно <span class="accent">1&nbsp;минута</span>.
+                    </p>
+                    <p class="pgph">
+                        Награда за успешное выполнение задания
+                        <span class="accent">+5&nbsp;баллов</span>.
+                    </p>
+                    <a
+                        href="suffle_puzzle_with_timer.html"
+                        data-fancybox-type="iframe"
+                        class="btn star-map-game"
+                        >начать задание</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div id="star-map-complete" class="hex-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-stars"></i>
+                    <div class="game-title">Звездная карта</div>
+                    <p class="pgph offset-top-lg">
+                        Вы обладаете отличными навыками штурмана и всегда
+                        сможете проложить правильный маршрут.<br /><span
+                            class="accent"
+                            >+5&nbsp;баллов</span
+                        >
+                        - ваша награда.
+                    </p>
+                    <a href="#" class="btn-continue">продолжить</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ЗВЕЗДНАЯ КАРТА ОШИБКА-->
+
+        <div id="star-map-fail" class="hex-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-stars"></i>
+                    <div class="game-title">Звездная карта</div>
+                    <p class="pgph offset-lg">Попробуйте ещё раз</p>
+                    <a href="#" class="btn-replay">продолжить</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ВЕРНЫЕ ДРУЗЬЯ -->
+
+        <div id="loyal-friends" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-friends"></i>
+                    <div class="game-title">Верные друзья</div>
+                    <p class="pgph">
+                        Попросите друзей присоединиться к полету на Вашем
+                        корабле, отправив им ссылку любым способом – оставив ее
+                        в социальной сети, отправив по почте или в любом
+                        межгалактическом мессенджере.
+                    </p>
+                    <p class="pgph pgph-sm">
+                        Однако тщательно выбирайте друзей, потому что на Вашем
+                        корабле всего <span class="accent">25 мест</span> и
+                        больше взять не получится.
+                    </p>
+                    <div class="pgph pgph-sm">
+                        Если друг воспользуется Вашим приглашением, Вы получите
+                        дополнительные баллы:
+                        <div>
+                            <b class="accent">+1 балл</b> - за каждого друга,
+                            который перейдет по Вашей ссылке.
+                        </div>
+                        <div>
+                            <b class="accent">+2 балла</b> - если ваш друг
+                            сделает Выбор между Светом и Тьмой.
+                        </div>
+                    </div>
+                    <form action="">
+                        <div
+                            class="form-group field-userwork-username required"
+                        >
+                            <div class="input-text">
+                                <label class="label-inside control-label" for=""
+                                    >Отправьте эту ссылку своим друзьям</label
+                                >
+                                <input
+                                    id="invite"
+                                    type="text"
+                                    class="form-control"
+                                    name=""
+                                    maxlength="255"
+                                    aria-required="true"
+                                    aria-invalid="true"
+                                    value="https://force.aeroflot.ru/invite/1239323j2323"
+                                />
+                                <button
+                                    data-clipboard-target="#invite"
+                                    class="btn-copy btn-clip"
+                                    type="button"
+                                >
+                                    копировать в буфер обмена
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ЭНЕРГИЯ КРИСТАЛЛОВ -->
+
+        <div id="crystal-energy" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-gem"></i>
+                    <div class="game-title">Энергия кристаллов</div>
+                    <p class="pgph offset-top-lg">
+                        Ваша Сила может быть преобразована в энергию светового
+                        меча. Однако в основе любого светового меча – особый
+                        кристалл.
+                    </p>
+                    <p class="pgph pgph-sm">
+                        Чем больше Вы соберете кристаллов, тем большей мощью
+                        будет обладать Ваш меч и больше баллов Вы получите.
+                        Однако помните, что время сбора кристаллов ограничено
+                        <span class="accent">1-й&nbsp;минутой</span>.
+                    </p>
+                    <a
+                        href="games/3/index.html"
+                        data-fancybox-type="iframe"
+                        class="btn gems-game"
+                        >начать задание</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div id="crystal-energy-complete" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-gem"></i>
+                    <div class="game-title">Энергия кристаллов</div>
+                    <p class="pgph offset-top-lg">
+                        Отлично! Вы собрали 25 кристаллов и получаете
+                        <span class="accent">+25&nbsp;баллов</span>!
+                    </p>
+                    <p class="pgph">
+                        В любой момент вы можете попробовать улучшить свой
+                        результат
+                    </p>
+                    <a href="#" class="btn">переиграть</a>
+                    <br />
+                    <br />
+                    <a href="#" class="btn">продолжить</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ПОТЕРЯННЫЕ КООРДИНАТЫ -->
+
+        <div id="lost-coordinates" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-radar"></i>
+                    <div class="game-title">потерянные координаты</div>
+                    <p class="pgph offset-top-lg">
+                        У Вас есть карта Вселенной, которая укажет путь
+                        к&nbsp;месту противостояния, однако врагу удалось
+                        спрятать часть карты. Нарушьте планы противника, найдите
+                        ее и&nbsp;получите
+                        <span class="accent">+25&nbsp;баллов</span>.
+                    </p>
+                    <div class="form-group field-userwork-username required">
+                        <div class="input-text">
+                            <label class="label-inside control-label" for=""
+                                >Введите номер своей карты &laquo;Аэрофлот
+                                Бонус&raquo;</label
+                            >
+                            <button class="input-text-btn">ок</button>
+                            <input
+                                type="text"
+                                class="form-control"
+                                name=""
+                                maxlength="255"
+                                aria-required="true"
+                                aria-invalid="true"
+                            />
+                        </div>
+                    </div>
+                    <div class="pgph-sm">
+                        Мы подскажем тебе, где находится недостающая часть карты
+                    </div>
+                    <p class="pgph">
+                        Вы еще не являетесь участником «Аэрофлот Бонус»?!
+                    </p>
+                    <div class="pgph-sm">
+                        Зарегистрируйтесь в программе, войдите в личный кабинет
+                        и&nbsp;получите ссылку на&nbsp;недостающую часть карты.
+                    </div>
+                    <a href="#lost-coordinates-next" class="btn-reg fancybox"
+                        >зарегистрироваться</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div id="lost-coordinates-next" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-radar"></i>
+                    <div class="game-title">потерянные координаты</div>
+                    <p class="pgph offset-top-lg">
+                        Отлично! У вас есть карта «Аэрофлот Бонус»! Зайдите в
+                        Личный кабинет программы, говорят, что недостающую часть
+                        карты видели там.
+                    </p>
+                    <a href="#lost-coordinates-complete" class="btn fancybox"
+                        >Найти карту</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div id="lost-coordinates-complete" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-radar"></i>
+                    <div class="game-title">потерянные координаты</div>
+                    <p class="pgph offset-lg">
+                        Поздравляем! Теперь у вас вся карта целиком, и вы
+                        сможете отправиться в полет. Кроме того, вы получаете
+                        <span class="accent">+25 баллов</span>!
+                    </p>
+                    <a href="#" class="btn-continue">Продолжить</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ДВЕ СТОРОНЫ СИЛЫ -->
+
+        <div id="two-sides" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-sides"></i>
+                    <div class="game-title">две стороны силы</div>
+                    <p class="pgph">
+                        Теперь, когда Вы ощутили Силу, пришло время для самого
+                        главного решения. Вы должны выбрать светлую или темную
+                        стороны. От этого решения зависит не только судьба
+                        Вселенной, но&nbsp;и&nbsp;Ваша&nbsp;судьба.
+                    </p>
+                    <ul class="sides-list">
+                        <li>
+                            <a
+                                href="#two-sides-light-complete"
+                                class="btn-light-side fancybox"
+                                >Светлая сторона</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#two-sides-dark-complete"
+                                class="btn-dark-side fancybox"
+                                >Темная сторона</a
+                            >
+                        </li>
+                    </ul>
+                    <p class="label pgph-sm">
+                        У вас будут шансы получить призы, только если
+                        выбранная<br />Вами сторона победит.
+                    </p>
+                    <p class="label pgph-sm">
+                        За выбор стороны Вы получите
+                        <span class="accent">+5 баллов</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="two-sides-dark-complete" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-first-order"></i>
+                    <div class="game-title">две стороны силы</div>
+                    <p class="pgph">
+                        Тьма – это не самый легкий выбор, и за него вы получаете
+                        <span class="accent">+20&nbsp;баллов</span>.
+                    </p>
+                    <p class="pgph pgph-sm">
+                        Надеемся, что победа будет на вашей стороне. Судьба
+                        Вселенной решится 31 декабря года.
+                    </p>
+                    <p class="pgph">
+                        А пока расскажите всем о своем выборе и привлеките
+                        друзей на свою сторону.
+                    </p>
+                    <div class="label">Поделиться</div>
+                    <ul class="social-list-sm">
+                        <li><a class="fb" href="#"></a></li>
+                        <li><a class="vk" href="#"></a></li>
+                        <li><a class="ok" href="#"></a></li>
+                        <li><a class="tw" href="#"></a></li>
+                    </ul>
+                    <a href="#" class="btn-continue btn-submit">Продолжить</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="two-sides-light-complete" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-resistance"></i>
+                    <div class="game-title">две стороны силы</div>
+                    <p class="pgph">
+                        Вы выбрали Свет и получаете за свой выбор
+                        <span class="accent">+5&nbsp;баллов</span>.
+                    </p>
+                    <p class="pgph pgph-sm">
+                        Надеемся, что победа будет на светлой стороне.<br />
+                        Судьба Вселенной решится 31 декабря года.
+                    </p>
+                    <p class="pgph">
+                        А пока расскажите всем о своем выборе и привлеките
+                        друзей на свою сторону.
+                    </p>
+                    <div class="label">Поделиться</div>
+                    <ul class="social-list-sm">
+                        <li><a class="fb" href="#"></a></li>
+                        <li><a class="vk" href="#"></a></li>
+                        <li><a class="ok" href="#"></a></li>
+                        <li><a class="tw" href="#"></a></li>
+                    </ul>
+                    <a href="#" class="btn-continue btn-submit">Продолжить</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ПОСЛЕДНИЕ ДЖЕДАИ -->
+
+        <div id="last-jedi" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-tickets"></i>
+                    <div class="game-title">последние джедаи</div>
+                    <p class="pgph offset-top-lg">
+                        Получите шанс выиграть приглашение на две персоны на
+                        специальный показ фильма «Звездные Войны: Последние
+                        джедаи» в г. Москве
+                    </p>
+                    <div class="special">
+                        <span class="special_city">Москва</span>
+                        <span class="special_address"
+                            >13 декабря года, 21:00</span
+                        >
+                    </div>
+                    <div class="pgph-sm">
+                        <b>Адрес показа:</b>
+                        <a class="accent" href="#" target="_blank"
+                            ><i class="ico-marker"></i>г. Москва, Кутузовский
+                            проспект, 57</a
+                        >, ТРЦ «Океания»,<br />4 этаж, кинотеатр «Формула Кино»,
+                        зал Laser IMAX
+                    </div>
+                    <br />
+                    <div class="pgph-sm offset-lg">
+                        На показ фильма действуют возрастные ограничения (от 16
+                        лет).
+                    </div>
+                    <br />
+                    <div class="btn-group">
+                        <a
+                            class="btn btn-blue fancybox"
+                            href="#last-jedi-decline"
+                            ><i class="ico-close"></i>отказаться</a
+                        >
+                        <a class="btn fancybox" href="#last-jedi-accept"
+                            ><i class="ico-check"></i>принять</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="last-jedi-decline" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-tickets"></i>
+                    <div class="game-title">последние джедаи</div>
+                    <p class="pgph offset-top-lg">
+                        Вы уверены, что не хотите принять участие в розыгрыше
+                        Приглашения на специальный показ фильма «Звездные Войны:
+                        Последние джедаи» в г. Москве?
+                    </p>
+                    <br />
+                    <div class="btn-group">
+                        <a
+                            class="btn btn-blue fancybox"
+                            href="#last-jedi-ab-num"
+                            >нет</a
+                        >
+                        <a class="btn fancybox" href="#last-jedi-win">да</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="last-jedi-accept" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-tickets"></i>
+                    <div class="game-title">Ваша заявка принята!</div>
+                    <p class="pgph offset-top-lg">
+                        10&nbsp;декабря года в&nbsp;00:10 часов<br />будут
+                        определены 200&nbsp;участников Акции
+                    </p>
+                    <p class="pgph">
+                        Результат розыгрыша вы увидите<br />в&nbsp;окне задания
+                        &laquo;Последние джедаи&raquo;
+                    </p>
+                    <p class="pgph">
+                        Чтобы получить награду, пост по адресу XXX должен быть
+                        доступен до окончания акции
+                    </p>
+                    <br />
+                    <a class="btn fancy-close" href="#">ок</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="last-jedi-ab-num" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-tickets"></i>
+                    <div class="game-title">Последние джедаи</div>
+                    <p class="pgph offset-top-lg">
+                        Введите номер своей карты «Аэрофлот Бонус», чтобы<br />получить
+                        возможность пойти на премьеру
+                    </p>
+                    <div class="form-group field-userwork-username required">
+                        <div class="input-text">
+                            <label class="label-inside control-label" for=""
+                                >Введите номер своей карты &laquo;Аэрофлот
+                                Бонус&raquo;</label
+                            >
+                            <input
+                                type="text"
+                                class="form-control"
+                                name=""
+                                maxlength="255"
+                                aria-required="true"
+                                aria-invalid="true"
+                            />
+                            <button class="input-text-btn">ок</button>
+                        </div>
+                    </div>
+                    <p class="pgph">
+                        Вы еще не&nbsp;являетесь участником
+                        «Аэрофлот&nbsp;Бонус»?!
+                    </p>
+                    <div class="pgph-sm">
+                        Зарегистрируйтесь в&nbsp;программе, это&nbsp;просто!
+                    </div>
+                    <a href="#" class="btn-reg">зарегистрироваться</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="last-jedi-win" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-tickets"></i>
+                    <div class="game-title">Ваше приглашение</div>
+                    <p class="pgph offset-top-lg">
+                        Вы выиграли Приглашение на две персоны на посещение<br />фильма
+                        «Звездные Войны: Последние джедаи»!
+                    </p>
+                    <div class="hex-modal_row">
+                        <div class="hex-modal_col">
+                            <a class="btn" href="#">сохранить pdf</a>
+                            <p class="pgph-sm">
+                                Вы можете сохранить билет на<br />компьютере и
+                                распечатать его
+                            </p>
+                        </div>
+                        <div class="hex-modal_col">
+                            <a class="btn fancybox" href="#last-jedi-share"
+                                >Отправить</a
+                            >
+                            <p class="pgph-sm">
+                                или вы можете отправить его<br />себе по
+                                электронной почте
+                            </p>
+                        </div>
+                    </div>
+                    <p class="pgph-sm">
+                        Не забудьте с собой паспорт! На показ фильма действуют
+                        возрастные<br />ограничения (от 16 лет)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="last-jedi-share" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-tickets"></i>
+                    <div class="game-title">Последние джедаи</div>
+                    <p class="pgph">
+                        Чтобы участвовать в розыгрыше, поделитесь
+                        пригласительным со своими друзьями через одну из
+                        соцсетей.
+                    </p>
+                    <ul class="social-list-sm">
+                        <li><a class="fb" href="#"></a></li>
+                        <li><a class="vk" href="#"></a></li>
+                        <li><a class="ok" href="#"></a></li>
+                    </ul>
+                    <p class="pgph-sm">
+                        Вставьте ссылку на пост ниже и нажмите кнопку «ОК»,<br />ссылка
+                        должна быть действительна до окончания акции.
+                    </p>
+
+                    <form action="#">
+                        <div
+                            class="form-group field-userwork-username required"
+                        >
+                            <div class="input-text">
+                                <label class="label-inside control-label" for=""
+                                    >Вставьте ссылку на ваш пост в
+                                    соцсети</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name=""
+                                    maxlength="255"
+                                    aria-required="true"
+                                    aria-invalid="true"
+                                />
+                                <button class="input-text-btn">ок</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- МИССИЯ 2018 -->
+
+        <div id="last-mission" class="hex-modal game-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <i class="g-ico-snowflake"></i>
+                    <div class="game-title">МИССИЯ 2018</div>
+                    <p class="pgph offset-top-lg">
+                        Новый межгалактический год отмечают<br />как на Светлой,
+                        так и на Темной стороне.
+                    </p>
+                    <p class="pgph">
+                        Поэтому на какой из сторон Силы ни находились бы ваши<br />друзья,
+                        поделитесь с ними новогодним настроением<br />и получите
+                        за это
+                        <span class="accent">+3 дополнительных балла</span>.
+                    </p>
+
+                    <div class="label">Выбрать открытку</div>
+
+                    <ul class="postcard-list">
+                        <li>
+                            <input
+                                class="postcard-opt"
+                                type="radio"
+                                name="postcard"
+                                id="postcard-light"
+                            />
+                            <label for="postcard-light"
+                                ><img
+                                    src="../materials/img/game/postcard-preview-light.png"
+                                    alt=""
+                            /></label>
+                            <a
+                                class="postcard-zoom fancybox-postcard-preview"
+                                href="#popup-postcard-light"
+                            ></a>
+                        </li>
+                        <li>
+                            <input
+                                class="postcard-opt"
+                                type="radio"
+                                name="postcard"
+                                id="postcard-darkness"
+                            />
+                            <label for="postcard-darkness"
+                                ><img
+                                    src="../materials/img/game/postcard-preview-dark.png"
+                                    alt=""
+                            /></label>
+                            <a
+                                class="postcard-zoom fancybox-postcard-preview"
+                                href="#popup-postcard-dark"
+                            ></a>
+                        </li>
+                    </ul>
+
+                    <div class="label">Поделиться с друзьями</div>
+
+                    <div>
+                        <ul class="social-list-sm">
+                            <li><a class="fb" href="#"></a></li>
+                            <li><a class="vk" href="#"></a></li>
+                            <li><a class="ok" href="#"></a></li>
+                        </ul>
+                    </div>
+
+                    <div style="display: none">
+                        <ul class="social-list-sm">
+                            <li><a class="fb" href="#"></a></li>
+                            <li><a class="vk" href="#"></a></li>
+                            <li><a class="ok" href="#"></a></li>
+                        </ul>
+                    </div>
+
+                    <p class="pgph-sm">
+                        Баллы будут начислены<br />после проверки
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ПОПАП С КАРТИНКОЙ СВЕТА -->
+
+        <div id="popup-postcard-light" class="hex-modal postcard-light">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <img
+                        src="../materials/img/game/postcard-light.jpg"
+                        alt=""
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- ПОПАП С КАРТИНКОЙ ТЬМЫ -->
+
+        <div id="popup-postcard-dark" class="hex-modal postcard-dark">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <img src="../materials/img/game/postcard-dark.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- НЕ ИГРОВЫЕ МОДАЛКИ -->
+
+        <div id="email-sent-modal" class="hex-modal site-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <div class="game-title">Письмо отправлено</div>
+                    <p class="pgph">
+                        Мы отправили вам письмо с подтверждением Перейдите по
+                        ссылке из письма для окончания регистрации.
+                    </p>
+                    <a href="#" class="btn">ок</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="login-modal" class="hex-modal site-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <div class="game-title">Войти</div>
+                    <p class="pgph">
+                        Введите ваш Логин - адрес электронной почты и пароль из
+                        письма подтверждения
+                    </p>
+
+                    <div class="form-container">
+                        <form action="#">
+                            <div
+                                class="form-group field-userwork-username required"
+                            >
+                                <div class="input-text">
+                                    <label
+                                        class="label-inside control-label"
+                                        for="userwork-username"
+                                        >Логин</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="login"
+                                        class="form-control"
+                                        name="UserWork[username]"
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                    />
+                                </div>
+                                <div class="help-block">
+                                    Необходимо заполнить Логин.
+                                </div>
+                            </div>
+
+                            <div
+                                class="form-group field-userwork-username required"
+                            >
+                                <div class="input-text">
+                                    <label
+                                        class="label-inside control-label"
+                                        for="userwork-username"
+                                        >Пароль</label
+                                    >
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        class="form-control"
+                                        name="UserWork[username]"
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                    />
+                                </div>
+                                <div class="help-block">
+                                    Необходимо заполнить Пароль.
+                                </div>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="btn btn--full btn-submit"
+                            >
+                                Войти
+                            </button>
+                        </form>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="label">Еще не регистрировались?</div>
+                    <a href="#" class="btn-reg">Зарегистрироваться</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="password-recovery-modal" class="hex-modal site-modal">
+            <div class="hex-modal_container">
+                <div class="hex-modal_content">
+                    <div class="game-title">Забыли Пароль?</div>
+                    <p class="pgph">
+                        Введите ваш адрес электронной почты, указанный при
+                        регистрации
+                    </p>
+
+                    <div class="form-container">
+                        <form action="#">
+                            <div
+                                class="form-group field-userwork-username required"
+                            >
+                                <div class="input-text">
+                                    <label
+                                        class="label-inside control-label"
+                                        for="userwork-username"
+                                        >Электронная почта</label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="login"
+                                        class="form-control"
+                                        name="UserWork[username]"
+                                        maxlength="255"
+                                        aria-required="true"
+                                        aria-invalid="true"
+                                    />
+                                </div>
+                                <div class="help-block">
+                                    Необходимо заполнить Логин.
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-submit">
+                                Отправить пароль
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../materials/js/jquery.min.js"></script>
+        <script src="../materials/js/vendor/slick.min.js"></script>
+        <script src="../materials/js/jquery.fancybox.pack.js"></script>
+        <script src="../materials/js/jquery.scrollTo.min.js"></script>
+        <script src="../materials/js/vendor/clipboard.min.js"></script>
+        <script src="../materials/js/main.js"></script>
+        <script src="../materials/js/game.js"></script>
+    </body>
+</html>
